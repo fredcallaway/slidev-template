@@ -1,7 +1,7 @@
 ---
 theme: ./theme
 drawings:
-  persist: true
+  persist: false
 transition: none
 mdc: true
 colorSchema: 'light'
@@ -17,13 +17,35 @@ addons:
 
 ---
 
-# This is my title for one specific slide
+# Shapes on a grid
 
+<GridLines/>
+
+<!-- todo: option to corner positions instead  -->
+<Box bg-blue l0 w150 />
+<Box bg-red h10 w10 r10 t10 />
 
 ---
 
-# Image is too tall
+# Reasonable images
 
-<img src="https://dummyimage.com/2000x2000"/>
+This text describes the image that you see. It is somewhat long but not that long.
+
+
+<img src="https://dummyimage.com/500x500"/>
+
+---
+
+# Unreasonably wide image
+
+This text describes the image that you see. It is somewhat long but not that long.
+
+<img src="https://dummyimage.com/2000x500"/>
+
+---
+
+# Unreasonably tall image
+
+<img src="https://dummyimage.com/500x2000"/>
 
 

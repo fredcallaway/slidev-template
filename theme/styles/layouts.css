@@ -1,88 +1,159 @@
-:root {
-  --slidev-theme-primary: #5d8392;
-}
-
+/* MAIN LAYOUT STYLES */
 .slidev-layout {
-  h1 {
-    color: var(--slidev-theme-primary);
+  /* padding: 0px; */
+  /* padding-top: 1.8rem; */
+
+  p {
+    line-height: 1.15;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  h1 + p {
-    @apply -mt-2 opacity-50 mb-4;
+  h1:first-child {
+    /* margin-top: -50px; */
+    /* margin-left: -50px; */
+    /* line-height: 100px; */
+    /* margin-bottom: 20px; */
+
+    /* position: absolute;
+    left: 50;
+    top: 50; */
+    /* background-color: red; */
   }
 
-  p + h2, ul + h2, table + h2 {
-    @apply mt-10;
+  p:not(:last-child) {
+    margin-bottom: 0.25em;
   }
-  
+
+  /* adjust default bullets */
+  li {
+    margin-bottom: 0.2em;
+    line-height: 1.2em;
+    font-size: 1em
+  }
+
+  ul {
+    margin-top: 0em;
+  }
+
+  /* change the bold and strong fonts */
+  strong, b {
+    font-family: var(--neversink-main-font);
+    font-weight: 700;
+  }
+
+  .slidev-code-wrapper {
+    width: 100%;
+  }
+
+  /* the highlighted terms from markdown highlighter == == */
+  mark {
+    @apply bg-amber-200;
+    @apply text-amber-600;
+    font-weight: 300;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-radius: 0.4em;
+  }
+
+  /* inlight code blocks */
+  :not(pre) > code {
+    font-size: 0.9em;
+    background: var(--neversink-bg-code-color);
+    border-radius: var(--slidev-code-radius);
+    color: var(--neversink-fg-code-color);
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--neversink-title-font);
+    /* padding-bottom: 0; */
+    margin-bottom: 0.3rem;
+  }
+
   h1 {
-    @apply text-4xl mb-4 -ml-[0.05em];
+    font-weight: 600;
+    font-size: 1.7em;
+    @apply leading-none;
   }
 
   h2 {
-    @apply text-3xl;
+    font-weight: 600;
+    font-size: 1.3em;
+    /* margin-top: 0.5em !important; */
   }
 
   h3 {
-    @apply text-2xl;
+    font-weight: 600;
+    font-size: 1.3em;
+    /* margin-top: 0.5em !important; */
   }
 
   h4 {
-    @apply text-xl;
+    font-weight: 600;
+    font-size: 1.2em;
   }
 
-  h5 {
-    @apply text-base;
+
+  .intro, .section {
+    @apply h-full grid;
+
+    h1 {
+      @apply text-6xl font-500 leading-20;
+    }
   }
 
-  h6 {
-    @apply text-sm pt-1 uppercase tracking-widest font-500 -ml-[0.05em];
+  .fact {
+    @apply text-center grid h-full;
+    h1 {
+      @apply text-8xl font-700;
+    }
+    h1 + p {
+      @apply font-700 text-2xl;
+    }
   }
+  .statement {
+    @apply text-center grid h-full;
 
-  h6:not(.opacity-100) {
-    @apply opacity-40;
+    h1 {
+      @apply text-6xl font-700;
+    }
   }
-}
+  .quote {
+    @apply grid h-full;
 
-.slidev-layout.cover,
-.slidev-layout.intro {
-  @apply h-full grid;
-
-  h1 {
-    color: inherit;
-    @apply text-6xl leading-20;
+    h1 + p {
+      @apply mt-2;
+    }
   }
-}
-
-.slidev-layout.fact {
-  @apply text-center grid h-full;
-  h1 {
-    @apply text-8xl font-700;
-  }
-  h1 + p {
-    @apply font-700 text-2xl;
-  }
-}
-
-.slidev-layout.statement {
-  @apply text-center grid h-full;
-
-  h1 {
-    @apply text-6xl font-700;
-  }
-}
-
-.slidev-layout.quote {
-  @apply grid h-full;
-
-  h1 + p {
-    @apply mt-2;
+  .section {
+    h1 {
+      @apply text-6xl font-500 leading-20;
+    }
   }
 }
 
-.slidev-layout.section {
-  h1 {
-    @apply text-6xl font-500 leading-20;
-  }
+
+
+
+
+/* 
+.slidev-layout h1 + p,
+.slidev-layout h2 + p,
+.slidev-layout h3 + p {
+  opacity: 0.9;
+  margin-top: 1.5em;
 }
 
+.slidev-layout h1 + ul,
+.slidev-layout h2 + ul,
+.slidev-layout h3 + ul {
+  margin-top: 0.3em;
+}
+ */

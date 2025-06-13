@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="slidev-layout cover grid h-full w-full place-items-center px-10" :class="colorscheme">
+  <div class="slidev-layout cover grid h-full w-full place-items-center px-10">
     <div class="text-center text-xl font-light">
       <slot />
     </div>
@@ -22,7 +22,7 @@ const props = defineProps({
 .cover {
   
   * {
-    @apply text-gray-300;
+    /* @apply text-gray-300; */
     font-weight: 200;
   }
 
