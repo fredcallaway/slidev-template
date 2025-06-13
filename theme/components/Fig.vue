@@ -4,14 +4,19 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  h: {
+    type: String,
+    default: 'full',
+  },
+  w: {
+    type: String,
+    default: 'full',
+  },
 });
 </script>
 
 <template>
-<div class="flex flex-col w-80 h-80">
-<img :src="src"
-  class="shrink-0"
-  style="width: 100%; min-height: 0; object-fit: contain;" 
-/>
+<div flex justify-center :h="h" :w="w">
+<img :src="src" object-contain />
 </div>
 </template>

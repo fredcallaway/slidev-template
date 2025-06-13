@@ -19,116 +19,127 @@ addons:
 
 # Shapes on a grid
 
-<GridLines major />
+This is text. I'm not sure why it goes here.
 
 <!-- todo: option to corner positions instead  -->
-<Box bg-blue l5 t10 w100 h40 />
-<Box bg-red h10 w10 r10 t10 />
-<Box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
-<Box bg-black l5 b10 w100 h10 />
+<box bg-blue l5 t10 w100 h30 />
+<box bg-red h10 w10 r10 t10 />
+<box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
+
+:box{.bg-black.l5.b10.w100.h10}
 
 ---
 
 # Reasonable images
 
-This text describes the image that you see. It is somewhat long but not that long.
+This text takes up a full row. {.w-full}
 
-<img src="https://dummyimage.com/500x500"/>
+:fig{src="https://dummyimage.com/500x500" border="black 10"}
+
+<fig src="./img/500x500.png" border="10 red"/>
+
+
+---
+
+# Image and caption
+
+This text tries to describe the image that you see. It is somewhat long but not that long. {.flex-1}
+
+:fig{src="https://dummyimage.com/2000x2000" border="black 10"}
+
+
 
 ---
 
 # Unreasonably wide image
 
-This text describes the image that you see. It is somewhat long but not that long.
+The image is too wide but it fits automatically. You should not try to use a side caption for this kind of image.
 
-<img src="https://dummyimage.com/2000x500" w-100/>
-
----
-
-# Using `<flex>` to align images and text
-
-<flex>
-This text describes the image that you see. It is somewhat long but not that long.
-<img src="https://dummyimage.com/2000x500" w100/>
-</flex>
+<fig src="https://dummyimage.com/2000x500"/>
 
 ---
 
-# flex-1
+# Using `::row` for side captions
 
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
+::row
+  This text tries to describe the image that you see. It is somewhat long but not that long.
+  :fig{src="https://dummyimage.com/1000x500"}
+::
 
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-::bottom::
-Wow look at this text!
-
-::cite::
-Callaway
+::row
+  This text tries to describe the image that you see. It is somewhat long but not that long.
+  :fig{src="https://dummyimage.com/1000x500"}
+::
 
 ---
 
-# Using `<div col/>`
+# Using `::row` for two wide images
 
-<div col bord>
-<img src="https://dummyimage.com/1500x500"/>
-This text describes the image that you see. It is somewhat long but not that long.
-</div>
+This is my description of the images. There is space for it because we use a row to keep the images in the bottom section. 
 
-<div col bord>
-<img src="https://dummyimage.com/1500x500"/>
-This image looks the same. But it is actually different!
-</div>
+::row
+  :fig{src="https://dummyimage.com/2000x1000"}
+  :fig{src="https://dummyimage.com/2000x1000"}
+::
+
+I can have text down here too!
 
 ---
 
-# Using `<div col/>`
+# Using `column` to prevent wrapping
 
-<div col bord flex-2>
-<img src="https://dummyimage.com/1500x500"/>
-This text describes the image that you see. It is somewhat long but not that long.
-</div>
+::column
+  <!-- todo: fig doesn't work here because it adds padding -->
+  :img{src="https://dummyimage.com/1500x500"}
+  This text describes the image that you see. It is somewhat long but not that long.
+::
 
-<div col bord flex-1>
-<img src="https://dummyimage.com/1500x500"/>
-This image looks the same. But it is actually different!
-</div>
+::column
+  :img{src="https://dummyimage.com/1500x500"}
+  This image looks the same. But it is actually different!
+::
 
-<div col bord flex-1>
-<img src="https://dummyimage.com/1500x500"/>
-This image looks the same. But it is actually different!
-</div>
+--- 
 
+# Any number of `column`s
+
+::column{.bord .p3}
+  :img{src="https://dummyimage.com/1500x500"}
+  This text describes the image that you see. It is somewhat long but not that long.
+::
+
+::column{.bord .p3}
+  :img{src="https://dummyimage.com/1500x500"}
+  This image looks the same. But it is actually different!
+::
+
+::column{.bord .p3}
+  :img{src="https://dummyimage.com/1500x500"}
+  :img{src="https://dummyimage.com/1500x500"}
+  :img{src="https://dummyimage.com/1000x500"}
+  _much image_
+::
 
 
 ---
 
-# Two wide images
+# Use `flex-1` for unreasonably tall image
 
-This text describes the image that you see. It is somewhat long but not that long.
-But there is a problem.
+Nulla posuere fringilla lectus non ultrices. Proin eu condimentum ligula, nec egestas nibh. Nulla vel arcu vel augue semper accumsan. Phasellus ex lorem, volutpat ut velit vitae, dictum vestibulum augue. {.flex-1}
 
-<flex gap-2>
-  <img src="https://dummyimage.com/2000x500" flex-1/>
-  <img src="https://dummyimage.com/2000x500" flex-1/>
-</flex>
+:fig{src="https://dummyimage.com/1000x1500"}
+
 
 ---
 
-# Unreasonably tall image
+# Fig
 
-<img src="https://dummyimage.com/500x2000"/>
+:fig{src="https://dummyimage.com/3000x1500"}
 
+---
 
+# Fig 2
+
+:fig{src="https://dummyimage.com/3000x3000" .bord}
+
+:fig{src="https://dummyimage.com/3000x3000" .bord}

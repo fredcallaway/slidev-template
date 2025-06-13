@@ -1,4 +1,6 @@
-import { defineConfig, presetAttributify, presetTagify} from 'unocss'
+import { defineConfig, presetAttributify, presetTagify, presetWind3} from 'unocss'
+// import extractorMdc from '@unocss/extractor-mdc'
+
 
 export default defineConfig({
   shortcuts: {
@@ -7,12 +9,17 @@ export default defineConfig({
     'bord': 'border-4 border-solid border-black',
     'bord-r': 'border-4 border-solid border-red-500',
     'debug': 'outline outline-3 outline-red',
-    'col': 'flex gap-2 flex-col items-center h-full flex-1'
+    'column': 'flex gap-2 flex-col items-start h-full flex-1',
+    'row': 'flex gap-2 flex-row items-start w-full'
   },
   presets: [
+    presetWind3(),
     presetAttributify(),
     presetTagify()
   ],
+  // extractors: [
+  //   extractorMdc()
+  // ],
   rules: [
     [/^t(\d+)$/, ([, d]) => ({ position: 'absolute', top: `${+d * 10}px` })],
     [/^b(\d+)$/, ([, d]) => ({ position: 'absolute', bottom: `${+d * 10}px` })],
@@ -21,7 +28,7 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      accent: 'rgb(26, 195, 159)'
+      accent: 'hsl(0, 80, 50)'
     }
   }
   // ...

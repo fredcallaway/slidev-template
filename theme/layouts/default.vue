@@ -59,7 +59,7 @@ const gy = computed(() => {
 
     <!-- Main slot is a flex-wrap -->
     <div class="default h-70">
-      <div class="w-full h-full flex flex-wrap min-h-0 overflow-visible items-center justify-evenly">
+      <div class="w-full h-full flex flex-wrap gap-3 min-h-0 overflow-visible items-center justify-evenly">
         <slot name="default" />
       </div>
     </div>
