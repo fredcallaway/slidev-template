@@ -19,11 +19,13 @@ addons:
 
 # Shapes on a grid
 
-<GridLines/>
+<GridLines major />
 
 <!-- todo: option to corner positions instead  -->
-<Box bg-blue l0 w150 />
+<Box bg-blue l5 t10 w100 h40 />
 <Box bg-red h10 w10 r10 t10 />
+<Box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
+<Box bg-black l5 b10 w100 h10 />
 
 ---
 
@@ -43,23 +45,85 @@ This text describes the image that you see. It is somewhat long but not that lon
 
 ---
 
-# Grid
+# Using `<flex>` to align images and text
 
-<flex class="borde2r">
+<flex>
 This text describes the image that you see. It is somewhat long but not that long.
-<img src="https://dummyimage.com/2000x500" w-100/>
+<img src="https://dummyimage.com/2000x500" w100/>
 </flex>
+
+---
+
+# flex-1
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+::bottom::
+Wow look at this text!
+
+::cite::
+Callaway
+
+---
+
+# Using `<div col/>`
+
+<div col bord>
+<img src="https://dummyimage.com/1500x500"/>
+This text describes the image that you see. It is somewhat long but not that long.
+</div>
+
+<div col bord>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+---
+
+# Using `<div col/>`
+
+<div col bord flex-2>
+<img src="https://dummyimage.com/1500x500"/>
+This text describes the image that you see. It is somewhat long but not that long.
+</div>
+
+<div col bord flex-1>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+<div col bord flex-1>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+
 
 ---
 
 # Two wide images
 
 This text describes the image that you see. It is somewhat long but not that long.
+But there is a problem.
 
-<!-- <div bord> -->
-  <img src="https://dummyimage.com/2000x500"/>
-  <img src="https://dummyimage.com/2000x500"/>
-<!-- </div> -->
+<flex gap-2>
+  <img src="https://dummyimage.com/2000x500" flex-1/>
+  <img src="https://dummyimage.com/2000x500" flex-1/>
+</flex>
 
 ---
 

@@ -42,11 +42,12 @@ const gy = computed(() => {
     </div>
 
     <template v-if="slots.right">
-      <div class="h-full flex justify-between border-10">
+      <div class="h-full flex justify-between">
         <div class="min-w-60">
           <slot name="default" />
         </div>
-        <div class="_right flex flex-col h-70 min-w-60">
+
+        <div class="flex flex-col h-70 min-w-60">
           <slot name="right" />
         </div>
       </div>
@@ -54,11 +55,11 @@ const gy = computed(() => {
 
       
     <!-- Always leave room for the title; we pull it out of default slot  -->
-    <div class="h-10 border"></div>
+    <div class="h-10"></div>
 
     <!-- Main slot is a flex-wrap -->
     <div class="default h-70">
-      <div class="w-full h-full flex flex-wrap gap-2 min-h-0 overflow-visible items-center justify-evenly">
+      <div class="w-full h-full flex flex-wrap min-h-0 overflow-visible items-center justify-evenly">
         <slot name="default" />
       </div>
     </div>
@@ -75,7 +76,7 @@ const gy = computed(() => {
     </div>
 
     <!-- Citation slot -->
-    <div v-if="slots.cite" class="absolute bottom-2 left-2 text-s fw-light text-gray-500 opacity-50">
+    <div v-if="slots.cite" class="absolute -b3 -l3 text-sm fw-light text-gray-300">
       <slot name="cite" />
     </div>
   </div>
@@ -88,6 +89,7 @@ const gy = computed(() => {
   position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 100;
 }
 .default {
   @apply flex flex-col

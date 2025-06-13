@@ -21,10 +21,6 @@
   color: var(--neversink-text-color);
 }
 
-.debug {
-  border: 5px solid red;
-  box-sizing: border-box;
-}
 
 .bwimg {
   filter: grayscale(100%) contrast(150%) brightness(120%);
