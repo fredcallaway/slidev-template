@@ -45,7 +45,7 @@ This text describes the image that you see. It is somewhat long but not that lon
 
 # Grid
 
-<flex border>
+<flex class="borde2r">
 This text describes the image that you see. It is somewhat long but not that long.
 <img src="https://dummyimage.com/2000x500" w-100/>
 </flex>

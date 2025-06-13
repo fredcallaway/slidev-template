@@ -4,7 +4,7 @@ export default defineConfig({
   shortcuts: {
     // custom the default background
     'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
-    'bord': 'border-4 border-solid border-black',
+    'border': 'border-4 border-solid border-black',
   },
   presets: [
     presetAttributify(),

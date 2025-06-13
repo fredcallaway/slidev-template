@@ -54,7 +54,7 @@ const gy = computed(() => {
 
       
     <!-- Always leave room for the title; we pull it out of default slot  -->
-    <div class="h-10"></div>
+    <div class="h-10 border"></div>
 
     <!-- Main slot is a flex-wrap -->
     <div class="default h-70">
@@ -62,6 +62,7 @@ const gy = computed(() => {
         <slot name="default" />
       </div>
     </div>
+
 
     <!-- Bottom slot -->
     <div v-if="slots.bottom" class="b0 w-full text-center my-auto">
