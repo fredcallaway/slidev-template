@@ -37,12 +37,9 @@ const gy = computed(() => {
 
   <div class="slidev-layout relative">
 
-    <!-- Background slot -->
     <div v-if="slots.background" class="fixed inset-0 w-full h-full -z-1">
       <slot name="background" />
     </div>
-
-    <!-- <h1 v-if="props.title">foo</h1> -->
 
     <template v-if="slots.right">
       <div class="h-full flex justify-between border-10">
@@ -59,9 +56,9 @@ const gy = computed(() => {
     <!-- Always leave room for the title; we pull it out of default slot  -->
     <div class="h-10"></div>
 
-    <!-- Main slot is a horizontal flex -->
-    <div class="_default h-70">
-      <div class="w-full h-full flex w-full min-h-0 overflow-visible items-center justify-evenly">
+    <!-- Main slot is a flex-wrap -->
+    <div class="default h-70">
+      <div class="w-full h-full flex flex-wrap gap-2 min-h-0 overflow-visible items-center justify-evenly">
         <slot name="default" />
       </div>
     </div>
@@ -86,16 +83,22 @@ const gy = computed(() => {
 </template>
 
 <style>
-._default h1 {
+.default h1 {
   position: absolute;
   top: 0px;
   left: 0px;
 }
-._default {
+.default {
   @apply flex flex-col
 }
 
-._default ol, ul {
+.default img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.default ol, ul {
   height: 700px;
   /* border: thin red solid */
 

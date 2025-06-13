@@ -31,7 +31,6 @@ addons:
 
 This text describes the image that you see. It is somewhat long but not that long.
 
-
 <img src="https://dummyimage.com/500x500"/>
 
 ---
@@ -40,7 +39,27 @@ This text describes the image that you see. It is somewhat long but not that lon
 
 This text describes the image that you see. It is somewhat long but not that long.
 
-<img src="https://dummyimage.com/2000x500"/>
+<img src="https://dummyimage.com/2000x500" w-100/>
+
+---
+
+# Grid
+
+<flex border>
+This text describes the image that you see. It is somewhat long but not that long.
+<img src="https://dummyimage.com/2000x500" w-100/>
+</flex>
+
+---
+
+# Two wide images
+
+This text describes the image that you see. It is somewhat long but not that long.
+
+<!-- <div bord> -->
+  <img src="https://dummyimage.com/2000x500"/>
+  <img src="https://dummyimage.com/2000x500"/>
+<!-- </div> -->
 
 ---
 

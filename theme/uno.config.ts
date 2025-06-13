@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify } from 'unocss'
+import { defineConfig, presetAttributify, presetTagify} from 'unocss'
 
 export default defineConfig({
   shortcuts: {
@@ -6,6 +6,10 @@ export default defineConfig({
     'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
     'bord': 'border-4 border-solid border-black',
   },
+  presets: [
+    presetAttributify(),
+    presetTagify()
+  ],
   rules: [
     [/^t(\d+)$/, ([, d]) => ({ position: 'absolute', top: `${+d * 10}px` })],
     [/^b(\d+)$/, ([, d]) => ({ position: 'absolute', bottom: `${+d * 10}px` })],
