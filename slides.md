@@ -13,7 +13,6 @@ addons:
 
 ## Capacity limit plots
 
-[2025-06-16]{.text-gray .transform .translate-y-100 .text-sm}
 <!--
 these are meeting notes
 -->
