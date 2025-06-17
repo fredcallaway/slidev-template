@@ -1,0 +1,2 @@
+cp -r dist archive/$1
+chmod -R a-w archive/$1
