@@ -1,4 +1,5 @@
 <script setup>
+import { useSlots } from 'vue';
 const props = defineProps({
   src: {
     type: String,
@@ -13,10 +14,16 @@ const props = defineProps({
     default: 'full',
   },
 });
+
+const slots = useSlots();
+
 </script>
 
 <template>
-<div flex justify-center :h="h" :w="w">
+<div flex flex-wrap justify-center :h="h" :w="w">
 <img :src="src" object-contain />
+<div v-if="slots.default" text-sm>
+  <slot name="default" />
+</div>
 </div>
 </template>
