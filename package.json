@@ -3,7 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build && node scripts/copy-figs.js",
+    "build:slides": "slidev build",
+    "copy-figs": "node scripts/copy-figs.js",
     "dev": "slidev",
     "export": "slidev export"
   },
