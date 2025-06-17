@@ -10,7 +10,8 @@ export default defineConfig({
     'bord-r': 'border-4 border-solid border-red-500',
     'debug': 'outline outline-3 outline-red',
     'column': 'flex gap-2 flex-col items-start h-full flex-1',
-    'row': 'flex gap-2 flex-row items-start w-full'
+    'row': 'flex gap-2 flex-row items-start w-full',
+    'banner': 'h-90 -mt-15 -ml-5 bg-primary flex flex-col justify-center p3 text-4xl font-bold text-white w-60',
   },
   presets: [
     presetWind3(),
