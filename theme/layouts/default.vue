@@ -58,7 +58,7 @@ const gy = computed(() => {
     <div class="h-10"></div>
 
     <!-- Main slot is a flex-wrap -->
-    <div class="default h-70">
+    <div class="default-layout h-70">
       <div class="w-full h-full flex flex-wrap gap-3 min-h-0 overflow-visible items-center justify-evenly">
         <slot name="default" />
       </div>
@@ -85,25 +85,23 @@ const gy = computed(() => {
 </template>
 
 <style>
-.default h1 {
+.default-layout h1 {
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 100;
 }
-.default {
+.default-layout {
   @apply flex flex-col
 }
 
-.default img {
+.default-layout img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-.default ol, ul {
+/* .default-layout ol, ul {
   height: 700px;
-  /* border: thin red solid */
-
-}
+} */
 </style>
