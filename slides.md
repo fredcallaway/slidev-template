@@ -1,7 +1,7 @@
 ---
 theme: ./theme
 drawings:
-  persist: true
+  persist: false
 transition: none
 mdc: true
 colorSchema: 'light'
@@ -11,87 +11,131 @@ addons:
   - slidev-component-scroll
 ---
 
-## Capacity limit plots
-
-<!--
-these are meeting notes
--->
+# A big title that is too darn long
 
 ---
 
-::div{.h-90 .-mt-15 .-ml-5 .bg-primary .w40 .flex .flex-col .justify-center .p3 .text-4xl .font-bold .text-white}
-Goal
-::
+# Shapes on a grid
 
-::div{.p10 .flex .flex-col .justify-center .flex-1}
-Find a simple result that motivates the conclusion that people are not doing pure best-first search, and are instead searching more locally (due to a capacity constraint).
-::
+<GridLines major />
 
-
---- 
-
-# Distribution of saccade distances
-
-::flex-1{.text-sm}
-
-We define distance as the number of steps in the tree to get from the previously fixated state to the newly fixated state.
-At first glance, people look a lot like the high-capacity model. However, they do show a slightly reduced proportion of saccades with distance over 2.
-::
-
-<fig src="./figs/e3/human/saccade_types-distance.png" h-35/>
-<fig src="./figs/e3/capacity/saccade_types-distance.png"/>
-
---- 
-
-# Relative probability by distance
-
-::flex-1{.text-sm}
-We get a clearer picture by looking at the probability relative to chance. The kink at distance 3 is striking, and sort of resembles capacity 3. I suspect that the flat part arises because most of those saccades are noise (i.e. not dependent on distance).
-::
-
-<fig src="./figs/e3/human/saccade_types_baseline-distance.png" h-35/>
-<fig src="./figs/e3/capacity/saccade_types_baseline-distance.png"/>
-
-
---- 
-
-# Saccade Types Baseline - Path Types
-
-::flex-1{.text-sm}
-Breaking down distance into its two components gives a more complete picture. In people, we see that the large distances are mostly 0 or 1 steps forward---these likely correspond to a "root" saccade.
-
-It's subtle, but the high-capacity models have clear structure within the >1 forward area (red box) that is absent in the human data. In addition to the effect of total distance (brighter towards bottom-left), we also see a within-difference preference for backward over forward steps (towards bottom right)
-::
-
-<fig src="./figs/e3/human/saccade_types_baseline-path_types.png" h-35/>
-<fig src="./figs/e3/capacity/saccade_types_baseline-path_types.png"/>
-
-<!-- <Box bord  border-red l10 t11 w25 h17 absolute/> -->
-<!-- <Box bord  border-red l112 t50 w22 h17 absolute/> -->
+<!-- todo: option to corner positions instead  -->
+<Box bg-blue l5 t10 w100 h40 />
+<Box bg-red h10 w10 r10 t10 />
+<Box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
+<Box bg-black l5 b10 w100 h10 />
 
 ---
 
-# Action value
+# Reasonable images
 
-::flex-1{.text-sm}
-If the more distant jumps are truly just noise, then they should not be sensitive to value. To make a fair comparison of value-sensitivity at different distances, we identify fixations where there were exactly two states with the same path-type as the one that was actually fixated. We then ask how the choice between those two states depends on their relative Q values.
+This text describes the image that you see. It is somewhat long but not that long.
 
-**Result**: People are quite sensitive to value at most distances. Oddly, increasing capacity reduces value sensitivity in the model.
-::
+<img src="https://dummyimage.com/500x500"/>
 
-<fig src="./figs/e3/human/child_vs_jump-action_value_distance.png" h-35/>
-<fig src="./figs/e3/capacity/child_vs_jump-action_value_distance.png"/>
+---
+
+# Unreasonably wide image
+
+This text describes the image that you see. It is somewhat long but not that long.
+
+<img src="https://dummyimage.com/2000x500" w-100/>
+
+---
+
+# Using `<flex>` to align images and text
+
+<flex>
+This text describes the image that you see. It is somewhat long but not that long.
+<img src="https://dummyimage.com/2000x500" w100/>
+</flex>
+
+---
+
+# flex-1
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+::bottom::
+Wow look at this text!
+
+::cite::
+Callaway
+
+---
+
+# Using `<div col/>`
+
+<div col bord>
+<img src="https://dummyimage.com/1500x500"/>
+This text describes the image that you see. It is somewhat long but not that long.
+</div>
+
+<div col bord>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+---
+
+# Using `<div col/>`
+
+<div col bord flex-2>
+<img src="https://dummyimage.com/1500x500"/>
+This text describes the image that you see. It is somewhat long but not that long.
+</div>
+
+<div col bord flex-1>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+<div col bord flex-1>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
 
 
 ---
 
-# Action value
+# Two wide images
 
-::flex-1{.text-sm}
-Same thing, only including saccades to states at depth 2 or greater.
+This text describes the image that you see. It is somewhat long but not that long.
+But there is a problem.
+
+<flex gap-2>
+  <img src="https://dummyimage.com/2000x500" flex-1/>
+  <img src="https://dummyimage.com/2000x500" flex-1/>
+</flex>
+
+---
+
+# Unreasonably tall image
+
+<img src="https://dummyimage.com/500x2000"/>
+
+
+---
+
+::banner{.w60}
+Section title
 ::
 
-<fig src="./figs/e3/human/child_vs_jump-action_value_distance_deep.png" h-35/>
-<fig src="./figs/e3/capacity/child_vs_jump-action_value_distance_deep.png"/>
-
-
+::flex-1{.-mt-10}
+This text describes the section.
+::
