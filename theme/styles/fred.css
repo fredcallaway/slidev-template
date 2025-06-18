@@ -18,18 +18,33 @@ duration-200 z-nav border border-main" initial-x="10" initial-y="10" style="left
   @apply scale-50 origin-top-right;
 }
 
+/* overview */
+#app > .z-modal.backdrop-blur-5px {
+  @apply p-5 py-10;
+
+  span {
+    @apply text-xs;
+    /* color: red; */
+  }
+}
+
+/* overview controls */
+#app > .z-modal.top-4 {
+  display: none;
+  background: red;
+  outline: red solid;
+}
+
 
 #app .z-nav {
-  @apply scale-30 w-[300vw] origin-bottom-left;
+  @apply scale-30 w-250 origin-bottom-left;
   /* Position toolbar in bottom right */
-  /* left: auto !important; */
   right: 0px !important;
   top: auto !important;
   bottom: 0px !important;
-  /* Make background transparent */
-  background: white;
-  border: none !important;
-  box-shadow: none !important;
+  /* background: white; */
+  /* border: none !important; */
+  /* box-shadow: none !important; */
 }
 
 /* Hide specific drawing tool buttons */
