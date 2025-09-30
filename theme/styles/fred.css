@@ -4,15 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@50;100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  @apply neversink-white-scheme; /* apply the default white scheme everywhere */
   font-family: 'Inter' sans-serif;
   font-weight: 400;
   font-size: 40px;
-  /* line-height: 1em; */
 }
 
-/* <div class="fixed flex flex-wrap text-xl p-2 gap-1 rounded-md bg-main shadow transition-opacity 
-duration-200 z-nav border border-main" initial-x="10" initial-y="10" style="left: 0px; top: 0px;"> */
 
 #slidev-goto-dialog {
   @apply scale-50 origin-top-right;
@@ -31,51 +27,20 @@ duration-200 z-nav border border-main" initial-x="10" initial-y="10" style="left
 /* overview controls */
 #app > .z-modal.top-4 {
   display: none;
-  background: red;
-  outline: red solid;
 }
 
-
-#app .z-nav {
+/* drawing */
+#app .slidev-drawing-controls {
   @apply scale-30 w-250 origin-bottom-left;
-  /* Position toolbar in bottom right */
   right: 0px !important;
   top: auto !important;
   bottom: 0px !important;
-  /* background: white; */
-  /* border: none !important; */
-  /* box-shadow: none !important; */
 }
-
-/* Hide specific drawing tool buttons */
-/* .z-nav button[title="Draw a line"],
-.z-nav button[title="Draw an arrow"], 
-.z-nav button[title="Draw an ellipse"],
-.z-nav button[title="Draw a rectangle"] {
-  display: none !important;
-} */
 
 nav {
   display: none !important;
   /* @apply scale-30 w-[300vw] origin-bottom-left */
 }
-
-
-
-/* #slide-content div {
-  outline: 1px solid red !important;
-} */
-
-/* p {
-  @apply flex-1;
-} */
-
-/* utilities */
-.slidecolor {
-  background-color: var(--neversink-bg-color);
-  color: var(--neversink-text-color);
-}
-
 
 .bwimg {
   filter: grayscale(100%) contrast(150%) brightness(120%);
@@ -90,32 +55,6 @@ nav {
 .slidev-vclick-hidden {
   opacity: 0.3;
   pointer-events: none;
-}
-
-html.dark {
-  /* dark mode css here */
-  .lectureno {
-    background-color: #9a9a9a;
-    color: hsl(0, 0%, 100%);
-    opacity: 1;
-  }
-
-  .invert {
-    filter: invert(1);
-  }
-
-  .slidev-layout {
-    color: #d0d0d0;
-  }
-}
-
-html:not(.dark) {
-  /* light mode css here */
-  .lectureno {
-    background-color: #e1e1e1;
-    color: #000;
-    opacity: 1;
-  }
 }
 
 /* credits */
