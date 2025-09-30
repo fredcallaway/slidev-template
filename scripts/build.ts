@@ -34,9 +34,6 @@ async function main() {
   const args = process.argv.slice(2)
   const src = args[0] || "slides.md"
   let name = args[1] || src.replace(/\.md$/, "")
-  if (name == "slides") {
-    name = "update"
-  }
   name = name.replace(/_/g, "-")
   
   const generationDateTime = new Date().toISOString()

@@ -176,7 +176,7 @@ function generateHTML(versions: string[]): string {
       </style>
     </head>
     <body>
-      <h1>EyePlan Slides</h1>
+      <h1>Fred's Slides</h1>
       <ul class="version-list">
         ${versionItems}
       </ul>
