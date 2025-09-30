@@ -6,15 +6,14 @@
     "build": "slidev build && node scripts/copy-figs.js",
     "build:slides": "slidev build",
     "copy-figs": "node scripts/copy-figs.js",
-    "dev": "slidev",
+    "dev": "slidev --port 3040",
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^51.8.1",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
-    "vue": "^3.5.16",
-    "slidev-component-scroll": "^1.1.0"
-
+    "@slidev/cli": "^52.2.4",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.5",
+    "slidev-component-scroll": "^1.1.0",
+    "vue": "^3.5.22"
   }
 }
