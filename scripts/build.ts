@@ -52,7 +52,7 @@ async function main() {
   console.log(dest)
 
   // Build slides using slidev CLI directly (avoiding nested bun calls)
-  execSync(`bun slidev build ${src} --base /${dest}/ -o site/${dest}/`, { stdio: "inherit" })
+  execSync(`pnpm slidev build ${src} --base /${dest}/ -o site/${dest}/`, { stdio: "inherit" })
   
   // Prepend comment to index.html with source file information
   const indexPath = `site/${dest}/index.html`
