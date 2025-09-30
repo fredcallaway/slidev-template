@@ -3,16 +3,28 @@ import { defineConfig, presetAttributify, presetTagify, presetWind3} from 'unocs
 
 
 export default defineConfig({
-  shortcuts: {
-    // custom the default background
-    'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
-    'bord': 'border-4 border-solid border-black',
-    'bord-r': 'border-4 border-solid border-red-500',
-    'debug': 'outline outline-3 outline-red',
-    'column': 'flex gap-2 flex-col items-start h-full flex-1',
-    'row': 'flex gap-2 flex-row items-start w-full',
-    'banner': 'h-90 -mt-15 -ml-5 bg-primary flex flex-col justify-center p3 text-4xl font-bold text-white w-60',
-  },
+  shortcuts: [
+    {
+      // custom the default background
+      'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
+      'bord': 'border-8 border-solid border-black',  // legacy
+      'bord-r': 'border-8 border-solid border-red-500',  // legacy
+      'debug': 'outline outline-3 outline-red',
+      'column': 'flex gap-2 flex-col items-start h-full',
+      'row': 'flex gap-2 flex-row items-start w-full',
+      'banner': 'h-90 -mt-15 -ml-5 bg-primary flex flex-col justify-center p3 text-4xl font-bold text-white w-60',
+      'flex-center': 'flex flex-wrap justify-center items-center',
+      'tilt': 'rotate-10',
+      'tilt-l': '-rotate-10',
+      'full': 'fixed inset-0 h-full w-full',
+      'flex-fixed': 'flex-shrink-0 flex-grow-0',
+    },
+    [/^circle-(.+)$/, ([, s]) => `rounded-full w-${s} h-${s}`],
+    [/^square-(.+)$/, ([, s]) => `w-${s} h-${s}`],
+    [/^fill-(.+)$/, ([, c]) => `fixed inset-0 h-full w-full flex flex-col items-center justify-center bg-${c} text-white text-2xl`],
+    [/^brd-(.+)$/, ([, c]) => `border-8 border-solid border-${c}`],
+    [/^rot(\d+)$/, ([, d]) => `rotate-${d}`],
+  ],
   presets: [
     presetWind3(),
     presetAttributify(),
@@ -22,14 +34,22 @@ export default defineConfig({
   //   extractorMdc()
   // ],
   rules: [
-    [/^t(\d+)$/, ([, d]) => ({ position: 'absolute', top: `${+d * 10}px` })],
-    [/^b(\d+)$/, ([, d]) => ({ position: 'absolute', bottom: `${+d * 10}px` })],
-    [/^r(\d+)$/, ([, d]) => ({ position: 'absolute', right: `${+d * 10}px` })],
-    [/^l(\d+)$/, ([, d]) => ({ position: 'absolute', left: `${+d * 10}px` })],
+    [/^t(-?\d+)$/, ([, d]) => ({ position: 'absolute', top: `${+d * 10}px` })],
+    [/^b(-?\d+)$/, ([, d]) => ({ position: 'absolute', bottom: `${+d * 10}px` })],
+    [/^r(-?\d+)$/, ([, d]) => ({ position: 'absolute', right: `${+d * 10}px` })],
+    [/^l(-?\d+)$/, ([, d]) => ({ position: 'absolute', left: `${+d * 10}px` })],
   ],
   theme: {
     colors: {
-      accent: 'hsl(0, 80, 50)'
+      accent: 'hsl(0, 80, 50)',
+      red: '#ec5759',
+      orange: '#ff9553',
+      yellow: '#ffcb6f',
+      blue: '#028ae7',
+      green: '#69d96c',
+      purple: '#be85ff',
+      pink: '#f187d0',
+
     }
   }
   // ...

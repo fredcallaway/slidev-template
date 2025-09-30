@@ -1,18 +1,10 @@
 <script setup>
 import { useSlots } from 'vue';
 const props = defineProps({
-  src: {
+  label: {
     type: String,
-    required: true,
-  },
-  h: {
-    type: String,
-    default: 'full',
-  },
-  w: {
-    type: String,
-    default: 'full',
-  },
+    default: ''
+  }
 });
 
 const slots = useSlots();
@@ -20,10 +12,14 @@ const slots = useSlots();
 </script>
 
 <template>
-<div flex flex-wrap justify-center :h="h" :w="w">
-<img :src="src" object-contain />
-<div v-if="slots.default" text-sm>
-  <slot name="default" />
-</div>
+<div flex flex-col justify-center items-center class="fig-container">
+  <span v-if="label" font-bold mb-1> {{  label }} </span>
+  <slot />
 </div>
 </template>
+
+<style>
+.fig-container img {
+  @apply object-contain;
+}
+</style>

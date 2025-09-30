@@ -10,41 +10,38 @@ const __dirname = path.dirname(__filename);
 async function copyFigs() {
   const projectRoot = path.resolve(__dirname, '..');
   const distDir = path.join(projectRoot, 'dist');
-  const distFigsDir = path.join(distDir, 'figs');
   
   console.log('🔍 Scanning for figure references...');
   
   // Find all markdown files
-  const markdownFiles = await findMarkdownFiles(projectRoot);
+  // const markdownFiles = await findMarkdownFiles(projectRoot);
+  const markdownFiles = ['slides.md', 'paper-figures.md'].map(f => path.join(projectRoot, f));
   
   // Extract all fig references
   const figPaths = new Set();
   
   for (const mdFile of markdownFiles) {
     const content = await fs.readFile(mdFile, 'utf-8');
-    const matches = content.matchAll(/(\.\/figs\/[^"]+)/g);
+    const matches = content.matchAll(/\.\/.+?\.(png|svg|jpg|jpeg|gif|webp)/g);
     
     for (const match of matches) {
-      figPaths.add(match[1]);
+      figPaths.add(match[0]);
     }
   }
-  
-  console.log(`📋 Found ${figPaths.size} figure references`);
-  
+    
   if (figPaths.size === 0) {
     console.log('✅ No figures to copy');
     return;
+  } else {
+    console.log(`📋 Found ${figPaths.size} figure references`);
   }
-  
-  // Ensure dist/figs directory exists
-  await fs.mkdir(distFigsDir, { recursive: true });
   
   // Copy each referenced figure
   let copiedCount = 0;
   for (const figPath of figPaths) {
     try {
       const sourcePath = path.join(projectRoot, figPath);
-      const destPath = path.join(distDir, figPath);
+      const destPath = path.join(distDir, figPath.replace(/^\.\//, ''));
       const destDir = path.dirname(destPath);
       
       // Create destination directory if it doesn't exist
@@ -53,7 +50,7 @@ async function copyFigs() {
       // Copy the file
       await fs.copyFile(sourcePath, destPath);
       copiedCount++;
-      console.log(`📁 Copied: ${figPath}`);
+      console.log(`📁 Copied: ${figPath} -> ${destPath}`);
     } catch (error) {
       console.error(`❌ Failed to copy ${figPath}:`, error.message);
     }

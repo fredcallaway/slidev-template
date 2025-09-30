@@ -6,7 +6,7 @@
 const props = defineProps({
   major: {
     type: Boolean,
-    default: false
+    default: true
   },
   color: {
     type: String,

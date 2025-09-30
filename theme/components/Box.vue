@@ -9,9 +9,12 @@ const props = defineProps({
 
 <template>
 
-  <div class="box p-2 grid grid-justify-center items-center">
-    <div leading-0 v-if="label" >{{ label }}</div>
-    <slot></slot>
+  <div p-2 flex-center bg-white border="~ black 6 solid" shadow-xl text-center font-500 >
+    <div v-if="label" v-html="label" />
+    <div v-else>
+      <slot />
+    </div>
   </div>
+  
 
 </template>

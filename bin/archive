@@ -1,2 +1,14 @@
-cp -r dist archive/$1
-chmod -R a-w archive/$1
+#!/bin/bash
+
+file=${1:-"slides.md"}
+name=${2:-${file%.md}}
+date=${3:-$(date +%Y-%m-%d)}
+dest=archive/$date-$name
+
+bun slidev build $file
+bun scripts/copy-figs.js
+cp -r img dist/img
+cp -r dist $dest
+chmod -R a-w $dest
+
+echo "Archived build of $file to $dest"

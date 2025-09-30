@@ -35,7 +35,7 @@ export default {
 
     const namedSlots = {}
     children.forEach((vnode, index) => {
-      namedSlots[(index + 1).toString()] = () => [vnode]
+      namedSlots[index.toString()] = () => [vnode]
     })
 
     return h(VSwitch, {

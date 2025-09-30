@@ -8,6 +8,7 @@ const {
   drawingEnabled,
 } = useDrawings()
 
+drawingEnabled.value = false
 
 export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
   return [

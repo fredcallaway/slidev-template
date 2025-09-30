@@ -7,3 +7,5 @@ dist
 .remote-assets
 components.d.ts
 .vscode/settings.json
+.firebase/*.cache
+site/
