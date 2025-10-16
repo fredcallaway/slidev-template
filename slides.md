@@ -9,133 +9,77 @@ contextMenu: false
 canvasWidth: 1600
 addons:
   - slidev-component-scroll
+grid: false
 ---
 
-# A big title that is too darn long
-
----
-
-# Shapes on a grid
-
-<GridLines major />
-
-<!-- todo: option to corner positions instead  -->
-<Box bg-blue l5 t10 w100 h40 />
-<Box bg-red h10 w10 r10 t10 />
-<Box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
-<Box bg-black l5 b10 w100 h10 />
+# A rational model of perceived control negative thinking, and avoidance
 
 ---
 
-# Reasonable images
-
-This text describes the image that you see. It is somewhat long but not that long.
-
-<img src="https://dummyimage.com/500x500"/>
+<img src='./img/2025-10-15-23-22-42.png' full/>
 
 ---
 
-# Unreasonably wide image
 
-This text describes the image that you see. It is somewhat long but not that long.
+# Three questions
 
-<img src="https://dummyimage.com/2000x500" w-100/>
-
----
-
-# Using `<flex>` to align images and text
-
-<flex>
-This text describes the image that you see. It is somewhat long but not that long.
-<img src="https://dummyimage.com/2000x500" w100/>
-</flex>
+1. Why do people think about bad things?
+2. Why do people _not_ think about bad things?
+3. Why do some people think about bad things too much?
 
 ---
 
-# flex-1
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-::bottom::
-Wow look at this text!
-
-::cite::
-Callaway
+## why think about bad things?
 
 ---
 
-# Using `<div col/>`
-
-<div col bord>
-<img src="https://dummyimage.com/1500x500"/>
-This text describes the image that you see. It is somewhat long but not that long.
-</div>
-
-<div col bord>
-<img src="https://dummyimage.com/1500x500"/>
-This image looks the same. But it is actually different!
-</div>
+TODO: examples
 
 ---
 
-# Using `<div col/>`
-
-<div col bord flex-2>
-<img src="https://dummyimage.com/1500x500"/>
-This text describes the image that you see. It is somewhat long but not that long.
-</div>
-
-<div col bord flex-1>
-<img src="https://dummyimage.com/1500x500"/>
-This image looks the same. But it is actually different!
-</div>
-
-<div col bord flex-1>
-<img src="https://dummyimage.com/1500x500"/>
-This image looks the same. But it is actually different!
-</div>
-
-
+<img src='./omni/Canvas 1.png' full />
 
 ---
 
-# Two wide images
-
-This text describes the image that you see. It is somewhat long but not that long.
-But there is a problem.
-
-<flex gap-2>
-  <img src="https://dummyimage.com/2000x500" flex-1/>
-  <img src="https://dummyimage.com/2000x500" flex-1/>
-</flex>
+<img src='./omni/Canvas 2.png' full />
 
 ---
 
-# Unreasonably tall image
-
-<img src="https://dummyimage.com/500x2000"/>
-
+<img src='./omni/Canvas 3.png' full />
 
 ---
 
-::banner{.w60}
-Section title
-::
+<img src='./omni/Canvas 3.png' full />
 
-::flex-1{.-mt-10}
-This text describes the section.
-::
+
+<Switch>
+
+  <Box l=0 t=0 w=80 h=40 text-sm justify-between flex-col>
+
+  ## rational choice
+  $$ \sum_{o} p(o) U(o) > 0 $$
+
+  _expected utility_
+  </Box>
+
+  <Box l=0 t=0 w=80 h=40 text-sm justify-between flex-col>
+
+  ## bounded-rational choice
+  $$ \frac{1}{N} \sum_{i}^N U(x_i) > 0,\quad x_i \sim p(o) $$
+  _sampling_
+  </Box>
+
+  <Box l=0 t=0 w=80 h=40 text-sm justify-between flex-col>
+
+  ## resource-rational choice
+  $$ \sum_{i}^N \text{sign}(x_i) > 0,\quad x_i \sim p(o) \cdot \big| U(o) \big| $$
+
+  _utility-weighted sampling_
+
+  </Box>
+
+</Switch>
+
+---
+
+
