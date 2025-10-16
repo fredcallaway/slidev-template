@@ -49,7 +49,7 @@ nav {
 
 /* customize the v-clicks */
 .slidev-vclick-target {
-  transition: opacity 100ms ease;
+  transition: opacity 0ms;
 }
 
 .slidev-vclick-hidden {

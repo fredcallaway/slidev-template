@@ -1,95 +1,141 @@
 ---
-theme: ./
-layout: cover
-background: https://images.unsplash.com/photo-1530819568329-97653eafbbfa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2092&q=80
-themeConfig:
-  primary: '#4d7534'
+theme: ./theme
+drawings:
+  persist: false
+transition: none
+mdc: true
+colorSchema: 'light'
+contextMenu: false
+canvasWidth: 1600
+addons:
+  - slidev-component-scroll
 ---
 
-# Presentation title
-
-Presentation subtitle
+# A big title that is too darn long
 
 ---
 
-# Slide Title
+# Shapes on a grid
 
-Slide Subtitle
+<GridLines major />
 
-* Slide bullet text
-  * Slide bullet text
-  * Slide bullet text
-* Slide bullet text
-* Slide bullet text
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Slide Title
-
-Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+<!-- todo: option to corner positions instead  -->
+<Box bg-blue l5 t10 w100 h40 />
+<Box bg-red h10 w10 r10 t10 />
+<Box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
+<Box bg-black l5 b10 w100 h10 />
 
 ---
-layout: section
----
 
-# Section Title
+# Reasonable images
 
----
-layout: statement
----
+This text describes the image that you see. It is somewhat long but not that long.
 
-# Statement
+<img src="https://dummyimage.com/500x500"/>
 
 ---
-layout: fact
----
 
-# 100%
-Fact information
+# Unreasonably wide image
 
----
-layout: quote
----
+This text describes the image that you see. It is somewhat long but not that long.
 
-# "Notable quote"
-Attribution
+<img src="https://dummyimage.com/2000x500" w-100/>
 
 ---
-layout: image-left
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
 
-# Code
+# Using `<flex>` to align images and text
 
-```ts {all|2|1-6|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
+<flex>
+This text describes the image that you see. It is somewhat long but not that long.
+<img src="https://dummyimage.com/2000x500" w100/>
+</flex>
 
 ---
-layout: center
-class: "text-center"
+
+# flex-1
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+<div flex-1 mx-2>
+<img src="https://dummyimage.com/1000x1000"/>
+</div>
+
+::bottom::
+Wow look at this text!
+
+::cite::
+Callaway
+
 ---
 
-# Learn More
+# Using `<div col/>`
 
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+<div col bord>
+<img src="https://dummyimage.com/1500x500"/>
+This text describes the image that you see. It is somewhat long but not that long.
+</div>
+
+<div col bord>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+---
+
+# Using `<div col/>`
+
+<div col bord flex-2>
+<img src="https://dummyimage.com/1500x500"/>
+This text describes the image that you see. It is somewhat long but not that long.
+</div>
+
+<div col bord flex-1>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+<div col bord flex-1>
+<img src="https://dummyimage.com/1500x500"/>
+This image looks the same. But it is actually different!
+</div>
+
+
+
+---
+
+# Two wide images
+
+This text describes the image that you see. It is somewhat long but not that long.
+But there is a problem.
+
+<flex gap-2>
+  <img src="https://dummyimage.com/2000x500" flex-1/>
+  <img src="https://dummyimage.com/2000x500" flex-1/>
+</flex>
+
+---
+
+# Unreasonably tall image
+
+<img src="https://dummyimage.com/500x2000"/>
+
+
+---
+
+::banner{.w60}
+Section title
+::
+
+::flex-1{.-mt-10}
+This text describes the section.
+::
