@@ -19,10 +19,10 @@ const tick = () => {
   frame.value += direction.value
   if (frame.value < 2) {
     direction.value = 1
-    timer = setTimeout(tick, 300)
+    timer = setTimeout(tick, 500)
   } else if (frame.value >= nFrame) {
     direction.value = -1
-    timer = setTimeout(tick, 300)
+    timer = setTimeout(tick, 500)
   } else {
     timer = setTimeout(tick, 1000 / frameRate)
   }

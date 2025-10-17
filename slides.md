@@ -24,16 +24,26 @@ grid: false
 # Three questions
 
 1. Why do people think about bad things?
-2. Why do people _not_ think about bad things?
+2. Why do people think about good things?
 3. Why do some people think about bad things too much?
 
 ---
 
-## why think about bad things?
+# People think about bad things
 
----
+- car crashes(Christianson & Loftus, 1987)
+- shocks (Sunstein & Zeckhauser, 2011)
+- prediction errors (Rouhani et al., 2018)
 
-TODO: examples
+<!-- img/shock.png -->
+
+<!-- 
+
+Evidence from judgments, memory recall, and incentivized choice suggest that people over-weight catastrophic events, whether its a car crash...
+
+Prevalence -> should be a rational
+
+-->
 
 ---
 
@@ -82,4 +92,132 @@ TODO: examples
 
 ---
 
+# Utility-weighted sampling
 
+<div flex="~ row" w-full items-center text-sm>
+  <fig label="possible outcomes">
+    <img src='./fig/risky.png' />
+  </fig>
+  <fig text-100pt>×</fig>
+  <fig label="utility-weighted sampling">
+    <img  src='./fig/uws.png' />
+  </fig>
+  <fig text-100pt>=</fig>
+  <fig label="considered outcomes">
+    <img  src='./fig/uws_considered.png' />
+  </fig>
+</div>
+
+---
+
+### where's the negativity bias?
+
+---
+
+# Utility-weighted sampling
+
+<div flex="~ row" w-full items-center text-sm>
+  <fig label="possible outcomes">
+    <img src='./fig/risky.png' />
+  </fig>
+  <fig text-100pt>×</fig>
+  <fig label="utility-weighted sampling">
+    <img  src='./fig/uws.png' />
+  </fig>
+  <fig text-100pt>=</fig>
+  <fig label="considered outcomes">
+    <img  src='./fig/uws_considered.png' />
+  </fig>
+</div>
+
+<Pointer x=35 y=54 rot=1 v-click color=red />
+
+---
+
+# Utility-weighted sampling + negative skew
+
+<div flex="~ row" w-full items-center text-sm>
+  <fig label="possible outcomes">
+    <img src='./fig/skew.png' />
+  </fig>
+  <div text-100pt>×</div>
+  <fig label="utility-weighted sampling">
+    <img src='./fig/uws.png' />
+  </fig>
+  <div text-100pt>=</div>
+  <fig label="considered outcomes">
+    <img src='./fig/considered_skew.png' />
+  </fig>
+</div>
+
+
+::bottom::
+
+<div flex="~ row" w-140 mx-auto items-center text-lg justify-between v-click>
+  <div w-35 line-height-tight >realistic outcome distribution</div>
+  <div w-35 >extremity bias</div>
+  <div w-35 >negativity bias</div>
+</div>
+
+---
+
+## why doesn't everyone do this?
+
+---
+
+# People think about good things
+
+<!-- <img src='./img/bear-result.png' /> -->
+
+- blurting things out bear
+- causal judgments knobe
+- attention/planning (me?)
+
+---
+
+# People think about good things
+
+<img src='./img/bear-result.png' />
+
+
+---
+
+what's in common? it's things we can control!
+
+---
+
+<img src='./omni/Canvas 3.png' full />
+
+<img l85 b41 opacity-100 w-40 src='./fig/skew.png' />
+
+---
+
+<img src='./omni/Canvas 5.png' full />
+
+
+<div r30 t35 text-yellow v-click>
+
+$$\alpha$$
+</div>
+
+<div r56 t35 text-yellow v-click>
+
+$$1 - \alpha$$
+</div>
+
+<div r10 t39 text-yellow text-xl italic underline v-click>control</div>
+
+---
+
+# How does control affect outcomes?
+
+<CurveVideo />
+
+
+<div t17 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml7>
+  <div font-bold w-45 line-height-tight>achieved outcomes</div>
+  <div font-bold w-45 >relative probability</div>
+  <div font-bold w-45 >reconstructed</div>
+</div>
+
+<!-- <div l50 bg-white w-100 h80 /> -->
