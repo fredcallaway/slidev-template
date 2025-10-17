@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { onSlideLeave, useIsSlideActive } from '@slidev/client'
-import { whenever } from '@vueuse/core'
+import { watchImmediate } from '@vueuse/core'
+
+const { autoplay } = defineProps<{
+  autoplay?: boolean
+}>()
 
 const isActive = useIsSlideActive()
 
@@ -48,7 +52,7 @@ const handleSliderMouseUp = () => {
   }
 }
 
-const isPaused = ref(false)
+const isPaused = ref(!autoplay)
 const togglePause = () => {
   if (isPaused.value) {
     isPaused.value = false
@@ -59,15 +63,15 @@ const togglePause = () => {
   }
 }
 
-whenever(isActive, () => {
-  console.log('start animation')
-  frame.value = 1
-  clearTimeout(timer)
-  tick()
-}, { immediate: true })
-
-onSlideLeave(() => {
-  clearTimeout(timer)
+watchImmediate(isActive, (active) => {
+  if (active) {
+    frame.value = 1
+    if (autoplay) {
+      tick()
+    }
+  } else {
+    clearTimeout(timer)
+  }
 })
 
 </script>
@@ -110,34 +114,19 @@ onSlideLeave(() => {
 }
 
 .curve-video-container:hover .slider-container {
-  opacity: 1;
+  opacity: 0.;
   pointer-events: auto;
+  z-index: 100
 }
 
 .frame-slider {
-  width: 80%;
-  height: 4px;
+  width: 100%;
+  height: 20px;
   background: #ddd;
   outline: none;
   border-radius: 2px;
   cursor: pointer;
 }
 
-.frame-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: #007acc;
-  border-radius: 50%;
-  cursor: pointer;
-}
 
-.frame-slider::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: #007acc;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-}
 </style>
