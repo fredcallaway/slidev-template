@@ -220,4 +220,6 @@ $$1 - \alpha$$
   <div font-bold w-45 >reconstructed</div>
 </div>
 
-<!-- <div l50 bg-white w-100 h80 /> -->
+<div l50 bg-white w-50 h70 debug/>
+
+<div l100 bg-white w-50 h70 debug/>
