@@ -3,38 +3,36 @@ import { ref, onMounted, computed } from 'vue'
 import { onSlideLeave, useIsSlideActive } from '@slidev/client'
 import { watchImmediate } from '@vueuse/core'
 
-const { autoplay, name = "normal" } = defineProps<{
-  autoplay?: boolean
-  name?: string
+const props = defineProps<{
+  play?: boolean
+  name: string
+  show0?: boolean
 }>()
 
-
-watchImmediate(() => name, val => console.log('name is', val))
-watchImmediate(() => autoplay, val => console.log('autoplay is', val))
-
-const isActive = useIsSlideActive()
-
-// const nFrame = {
-//   normal: 49,
-//   skew: 99,
-// }[name]
 const nFrame = 99
 const frameRate = 30
 
+const isActive = useIsSlideActive()
 const frame = ref(1)
 const direction = ref(1)
 const isSliderOverride = ref(false)
 const sliderValue = ref(1)
+const isPaused = ref(false)
+
+const isPlaying = computed(() => !props.show0 && isActive.value && props.play && !isPaused.value)
+
 
 let timer: NodeJS.Timeout
 
 const tick = () => {
-  if (!isActive.value || isSliderOverride.value) return
+  clearTimeout(timer)
+  if (!isPlaying.value || isSliderOverride.value) return
   // console.log('tick', frame.value)
+  const fromZero = frame.value == 0
   frame.value += direction.value
   if (frame.value < 2) {
     direction.value = 1
-    timer = setTimeout(tick, 500)
+    timer = setTimeout(tick, fromZero ? 1000 / frameRate : 500)
   } else if (frame.value >= nFrame) {
     direction.value = -1
     timer = setTimeout(tick, 500)
@@ -42,6 +40,45 @@ const tick = () => {
     timer = setTimeout(tick, 1000 / frameRate)
   }
 }
+
+watchImmediate(isActive, (active) => {
+  if (active) {
+    // frame.value = props.show0 ? 0 : 1
+    tick()
+  } else {
+    clearTimeout(timer)
+  }
+})
+
+watchImmediate(() => props.play, (val) => {
+  console.log('play is', props.play)
+  if (val) {
+    isPaused.value = false
+    tick()
+  } else {
+    clearTimeout(timer)
+  }
+})
+
+watchImmediate(() => props.show0, (val) => {
+  if (val) {
+    frame.value = 0
+  } else {
+    frame.value = 1
+  }
+})
+
+
+const togglePause = () => {
+  if (isPaused.value) {
+    isPaused.value = false
+    tick()
+  } else {
+    isPaused.value = true
+    clearTimeout(timer)
+  }
+}
+
 
 const handleSliderInput = (event: Event) => {
   const target = event.target as HTMLInputElement
@@ -61,37 +98,6 @@ const handleSliderMouseUp = () => {
   }
 }
 
-const isPaused = ref(!autoplay)
-
-const togglePause = () => {
-  if (isPaused.value) {
-    isPaused.value = false
-    tick()
-  } else {
-    isPaused.value = true
-    clearTimeout(timer)
-  }
-}
-
-watchImmediate(isActive, (active) => {
-  if (active) {
-    frame.value = 1
-    if (autoplay) {
-      tick()
-    }
-  } else {
-    clearTimeout(timer)
-  }
-})
-
-watchImmediate(() => autoplay, (autoplay) => {
-  if (autoplay) {
-    tick()
-  } else {
-    isPaused.value = true
-    clearTimeout(timer)
-  }
-})
 
 </script>
 

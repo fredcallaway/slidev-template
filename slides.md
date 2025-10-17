@@ -210,59 +210,57 @@ $$1 - \alpha$$
 <div r10 t39 text-yellow text-xl italic underline v-click>control</div>
 
 ---
+clicks: 5
+---
 
 # How does control affect outcomes?
 
-<CurveVideo :autoplay="$clicks >= 1" :name="$clicks >= 3 ? 'normal-fit' : 'normal'"  />
+<CurveVideo t5 
+  :show0="$clicks == 0"
+  :play="$clicks > 0"
+  :name="$clicks < 3 ? 'normal' : $clicks < 5 ? 'normal-fit' : 'skew-fit'"
+/>
 
-<div t17 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml7>
-  <div font-bold w-45 line-height-tight>achieved outcomes</div>
-  <div font-bold w-45 >relative probability</div>
-  <div font-bold w-45 >reconstructed</div>
+
+<div t12 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml7>
+  <div v-if="$clicks == 0" font-bold w-45 line-height-tight text-baseline>
+    possible outcomes
+  </div>
+  <div v-else font-bold w-45 line-height-tight text-received>
+    achieved outcomes
+  </div>
+  <div font-bold w-45 :class="$clicks >= 3 ? 'text-bias' : ''">relative probability</div>
+  <div font-bold w-45 text-sample>predicted outcomes</div>
+</div>
+
+<div grid grid-cols-3 gap-5 items-center w-140 text-base>
+
+  <div flex-center flex-col gap-2>
+    <Math text-baseline tex="\bar{p}(o)" />
+    <Math text-received tex="p_α(o)" v-click=1 />
+  </div>
+
+  <div flex-center flex-col gap-2>
+    <Math inline tex="p_α(o) / \bar{p}(0)" />
+    <Math inline text-bias tex="e^{\beta U(o)}" v-click=3 />
+  </div>
+
+  <div flex-center>
+    <Math text-sample tex="\bar{p}(o) \cdot e^{\beta U(o)}"/>
+  </div>
+
 </div>
 
 <div l50 bg-white w-50 h70 v-click.hide=2 />
 <div l100 bg-white w-50 h70 v-click.hide=4 />
 
 ---
-clicks: 1
----
 
-# How does control affect outcomes?
-
-<CurveVideo :autoplay="$clicks >= 1" name="skew-fit" />
-
-<div t17 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml7>
-  <div font-bold w-45 line-height-tight>achieved outcomes</div>
-  <div font-bold w-45 >relative probability</div>
-  <div font-bold w-45 >reconstructed</div>
-</div>
-
----
-
-
-
-<div flex flex-row  items-center h-10 gap-10>
-
-  <div flex flex-col>
-    <Math text-baseline tex="\bar{p}(o)" />
-    <Math text-received tex="p_α(o)" />
-  </div>
-
-  <div flex flex-col>
-    <Math text-black tex="p_α(o) / \bar{p}(0)" />
-    <Math text-bias tex="e^{\beta U(o)}" />
-  </div>
-
-  <Math text-sample tex="\bar{p}(o) \cdot e^{\beta U(o)}" />
-
-</div>
-
-
+# Why do some people think about bad things too much?
 
 
 ---
 
 - captures helplessness and hopelessness
 - unifies reward-based and transition-based notions of control
-- 
+

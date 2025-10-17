@@ -55,4 +55,12 @@ watch(() => props.inline, () => {
 .math-container {
   display: inline-block;
 }
+
+.math-container :deep(.katex-display) {
+  margin: 0pt;
+}
+
+.math-container :deep(.katex-display > .katex) {
+  text-align: left;
+}
 </style>
