@@ -170,7 +170,9 @@ Prevalence -> should be a rational
 <!-- <img src='./img/bear-result.png' /> -->
 
 - blurting things out bear
-- causal judgments knobe
+- causal judgments Icard...Knobe
+- what is "normal" Bear & Knobe
+- value-directed attention (gluth, anderson, me)
 - attention/planning (me?)
 
 ---
@@ -211,8 +213,7 @@ $$1 - \alpha$$
 
 # How does control affect outcomes?
 
-<CurveVideo />
-
+<CurveVideo :autoplay="$clicks >= 1" :name="$clicks >= 3 ? 'normal-fit' : 'normal'"  />
 
 <div t17 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml7>
   <div font-bold w-45 line-height-tight>achieved outcomes</div>
@@ -220,6 +221,48 @@ $$1 - \alpha$$
   <div font-bold w-45 >reconstructed</div>
 </div>
 
-<div l50 bg-white w-50 h70 debug/>
+<div l50 bg-white w-50 h70 v-click.hide=2 />
+<div l100 bg-white w-50 h70 v-click.hide=4 />
 
-<div l100 bg-white w-50 h70 debug/>
+---
+clicks: 1
+---
+
+# How does control affect outcomes?
+
+<CurveVideo :autoplay="$clicks >= 1" name="skew-fit" />
+
+<div t17 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml7>
+  <div font-bold w-45 line-height-tight>achieved outcomes</div>
+  <div font-bold w-45 >relative probability</div>
+  <div font-bold w-45 >reconstructed</div>
+</div>
+
+---
+
+
+
+<div flex flex-row  items-center h-10 gap-10>
+
+  <div flex flex-col>
+    <Math text-baseline tex="\bar{p}(o)" />
+    <Math text-received tex="p_α(o)" />
+  </div>
+
+  <div flex flex-col>
+    <Math text-black tex="p_α(o) / \bar{p}(0)" />
+    <Math text-bias tex="e^{\beta U(o)}" />
+  </div>
+
+  <Math text-sample tex="\bar{p}(o) \cdot e^{\beta U(o)}" />
+
+</div>
+
+
+
+
+---
+
+- captures helplessness and hopelessness
+- unifies reward-based and transition-based notions of control
+- 

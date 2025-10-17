@@ -1,16 +1,25 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { onSlideLeave, useIsSlideActive } from '@slidev/client'
 import { watchImmediate } from '@vueuse/core'
 
-const { autoplay } = defineProps<{
+const { autoplay, name = "normal" } = defineProps<{
   autoplay?: boolean
+  name?: string
 }>()
+
+
+watchImmediate(() => name, val => console.log('name is', val))
+watchImmediate(() => autoplay, val => console.log('autoplay is', val))
 
 const isActive = useIsSlideActive()
 
-const nFrame = 49
-const frameRate = 25
+// const nFrame = {
+//   normal: 49,
+//   skew: 99,
+// }[name]
+const nFrame = 99
+const frameRate = 30
 
 const frame = ref(1)
 const direction = ref(1)
@@ -21,7 +30,7 @@ let timer: NodeJS.Timeout
 
 const tick = () => {
   if (!isActive.value || isSliderOverride.value) return
-  console.log('tick', frame.value)
+  // console.log('tick', frame.value)
   frame.value += direction.value
   if (frame.value < 2) {
     direction.value = 1
@@ -53,6 +62,7 @@ const handleSliderMouseUp = () => {
 }
 
 const isPaused = ref(!autoplay)
+
 const togglePause = () => {
   if (isPaused.value) {
     isPaused.value = false
@@ -74,11 +84,20 @@ watchImmediate(isActive, (active) => {
   }
 })
 
+watchImmediate(() => autoplay, (autoplay) => {
+  if (autoplay) {
+    tick()
+  } else {
+    isPaused.value = true
+    clearTimeout(timer)
+  }
+})
+
 </script>
 
 <template>
 <div class="curve-video-container" w-full>
-  <img :src="`/fig/curves/${frame}.svg`" flex-1 max-h-full w-full object-contain
+  <img :src="`/fig/curves/${name}/${frame}.svg`" flex-1 max-h-full w-full object-contain
     @click=togglePause()
   />
   <div class="slider-container">

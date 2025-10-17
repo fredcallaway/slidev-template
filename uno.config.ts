@@ -50,6 +50,11 @@ export default defineConfig({
       purple: '#be85ff',
       pink: '#f187d0',
 
+      baseline: "#5FA3B4",
+      bias: "#E1C67C",
+      sample: "#83D89E",
+      received: "#4AB467",
+
     }
   }
   // ...

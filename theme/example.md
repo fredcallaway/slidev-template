@@ -139,3 +139,31 @@ Section title
 ::flex-1{.-mt-10}
 This text describes the section.
 ::
+
+---
+
+# Math Component
+
+<div class="test-math">
+  <h2>Inline Math:</h2>
+  <p>Here's some inline math: 
+    <Math tex="\sum_x f(x)" inline /> and 
+    <Math tex="\alpha + \beta = \gamma" inline />
+  </p>
+  
+  <h2>Display Math:</h2>
+  <Math tex="\sum_{i=1}^{n} x_i = \frac{n(n+1)}{2}" />
+  
+  <h2>Complex Expression:</h2>
+  <Math tex="\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}" />
+</div>
+
+<style>
+.test-math h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.test-math p {
+  margin-bottom: 1rem;
+}
+</style>
