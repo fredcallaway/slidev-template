@@ -3,14 +3,16 @@ import { ref, onMounted, computed } from 'vue'
 import { onSlideLeave, useIsSlideActive } from '@slidev/client'
 import { watchImmediate } from '@vueuse/core'
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   play?: boolean
   name: string
   show0?: boolean
-}>()
-
-const nFrame = 99
-const frameRate = 30
+  nFrame?: number
+  frameRate?: number
+}>(), {
+  frameRate: 30,
+  nFrame: 99,
+})
 
 const isActive = useIsSlideActive()
 const frame = ref(1)
@@ -30,14 +32,17 @@ const tick = () => {
   // console.log('tick', frame.value)
   const fromZero = frame.value == 0
   frame.value += direction.value
+  const pause = !fromZero && frame.value == 1 || direction.value == 1 && frame.value == props.nFrame
+  const delay = pause ? 1000 : 1000 / props.frameRate
+
   if (frame.value < 2) {
     direction.value = 1
-    timer = setTimeout(tick, fromZero ? 1000 / frameRate : 500)
-  } else if (frame.value >= nFrame) {
+    timer = setTimeout(tick, delay)
+  } else if (frame.value >= props.nFrame) {
     direction.value = -1
-    timer = setTimeout(tick, 500)
+    timer = setTimeout(tick, delay)
   } else {
-    timer = setTimeout(tick, 1000 / frameRate)
+    timer = setTimeout(tick, delay)
   }
 }
 
