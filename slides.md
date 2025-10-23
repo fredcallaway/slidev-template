@@ -197,21 +197,42 @@ what's in common? it's things we can control!
 <img src='./omni/Canvas 5.png' full />
 
 
-<div r30 t35 text-yellow v-click>
+<div r30 t35 text-orange v-click>
 
 $$\alpha$$
 </div>
 
-<div r56 t35 text-yellow v-click>
+<div r56 t35 text-orange v-click>
 
 $$1 - \alpha$$
 </div>
 
-<div r10 t39 text-yellow text-xl italic underline v-click>control</div>
+<div r10 t39 text-orange text-xl italic underline v-click>control</div>
 
+---
+clicks: 7
 ---
 
 <h1>How does control affect outcomes?</h1>
+
+<BinTree t5
+  :current="['root', 'root', 'R', 'R', 'RR', 'RR', 'RRL', 'RRL'][$clicks]"
+  :target="['', 'R', '', 'RR', '', 'RRR'][$clicks]"
+/>
+
+<div text-orange r30 b16 v-click=6 >slip!</div>
+
+
+<div text-baseline font-bold b0 w134 flex="~ row" justify-between>
+  <div v-for="(r, i) in [-1, -3, +1, -1, -4, 2, -6, 3]">{{ r }}</div>
+</div>
+
+<div v-click=7 b0 mb--2 l117 
+  border-received border-6 w-10 text-center text-2xl font-bold text-received bg-white>
+  -6</div>
+
+<div text-received b0 mb--4 l128 v-click=7 >outcome</div>
+
 
 
 ---
