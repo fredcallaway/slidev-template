@@ -210,6 +210,11 @@ $$1 - \alpha$$
 <div r10 t39 text-yellow text-xl italic underline v-click>control</div>
 
 ---
+
+<h1>How does control affect outcomes?</h1>
+
+
+---
 clicks: 6
 ---
 
@@ -279,31 +284,56 @@ clicks: 6
 <div l100 bg-white w-50 h70 v-click.hide=4 />
 
 ---
-clicks: 1
----
 
-# How does perceived control affect predictions?
+# Summary
 
-<CurveVideo t5 
-  :play="$clicks > 0"
-  name="skew-uws"
-/>
-
+- people over-sample extreme outcomes; this is rational 
+- if bad outcomes tend to be more extreme, this yields negativity bias
+- having control over the outcomes makes good ones more likely
+- this is well-approximated by a softmax
 
 ---
 
-# Why do some people think about bad things too much?
+<h1> Why do people think about bad things <span v-mark.purple="2">too much?</span> </h1>
 
-they think they have less control
+<!-- <div t0 mt--5 l20>some</div> -->
 
-"too much" -> less than they actually have
+<div text-3xl text-center>
+  <span v-click=1>They think they have less control</span><br>
+  <span v-click=3 v-mark="{ at: 3, color: '#be85ff', animate: false}" >
+    than they actually have </span>
+</div>
 
-learning
+<img w10 r10 b10 src='./faces/meh.svg' v-click=4 />
+
+---
 
 - less data
 - worse performance
-- unrealistic expectations
+- biased learning
 
+---
+clicks: 1
+---
+
+# Pessimism is self-fulfilling
+
+
+<CurveVideo t0 play
+  :name="(
+    $clicks == 0 ? 'policy-0.95-10' :
+    $clicks == 1 ? 'policy-0.75-10' :
+    'NOPE'
+  )"
+  :n-frame="101"
+/>
+
+
+<div t15 flex="~ row" w-146 mx-auto items-center text-lg justify-between text-center ml4>
+  <div font-bold w-45 text-sample>sampled outcomes</div>
+  <div font-bold w-45 text-received>achieved outcomes</div>
+  <div font-bold w-45 text-black>average outcomes</div>
+</div>
 
 
 ---
