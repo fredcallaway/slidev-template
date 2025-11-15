@@ -18,6 +18,8 @@ export default defineConfig({
       'tilt-l': '-rotate-10',
       'full': 'fixed inset-0 h-full w-full',
       'flex-fixed': 'flex-shrink-0 flex-grow-0',
+      'cover': 'object-cover!',
+      'cite': 'text-sm fw-light text-gray-400',
     },
     [/^circle-(.+)$/, ([, s]) => `rounded-full w-${s} h-${s}`],
     [/^square-(.+)$/, ([, s]) => `w-${s} h-${s}`],
@@ -38,17 +40,36 @@ export default defineConfig({
     [/^b(-?\d+)$/, ([, d]) => ({ position: 'absolute', bottom: `${+d * 10}px` })],
     [/^r(-?\d+)$/, ([, d]) => ({ position: 'absolute', right: `${+d * 10}px` })],
     [/^l(-?\d+)$/, ([, d]) => ({ position: 'absolute', left: `${+d * 10}px` })],
+    
+    // Clip-path rules
+    // [/^clip-(\d+)$/, ([, p]) => ({ 'clip-path': `inset(${p}%)` })],
+    // [/^clip-(\d+)-(\d+)$/, ([, v, h]) => ({ 'clip-path': `inset(${v}% ${h}%)` })],
+    [/^clip-(\d+)-(\d+)-(\d+)-(\d+)$/, ([, t, r, b, l]) => ({ 'clip-path': `inset(${t}% ${r}% ${b}% ${l}%)` })],
+    [/^clip-(?=.*[trbl])([trbl]\d+(?:-[trbl]\d+)*)$/, ([, sides]) => {
+      const values = { t: '0', r: '0', b: '0', l: '0' };
+      sides.split('-').forEach(side => {
+        const match = side.match(/([trbl])(\d+)/);
+        if (match) values[match[1]] = match[2] + '%';
+      });
+      return { 'clip-path': `inset(${values.t} ${values.r} ${values.b} ${values.l})` };
+    }],
+    
   ],
   theme: {
     colors: {
       accent: 'hsl(0, 80, 50)',
-      red: '#ec5759',
-      orange: '#ff9553',
-      yellow: '#ffcb6f',
-      blue: '#028ae7',
-      green: '#69d96c',
-      purple: '#be85ff',
-      pink: '#f187d0',
+      // red: '#ec5759',
+      // orange: '#ff9553',
+      // yellow: '#ffcb6f',
+      // blue: '#028ae7',
+      // green: '#69d96c',
+      // purple: '#be85ff',
+      // pink: '#f187d0',
+
+      baseline: "#5FA3B4",
+      bias: "#E1C67C",
+      sample: "#83D89E",
+      received: "#4AB467",
 
     }
   }

@@ -1,11 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { useSlots } from 'vue';
-const props = defineProps({
-  label: {
-    type: String,
-    default: ''
-  }
-});
+const props = defineProps<{
+  label?: string
+  caption?: string
+}>();
 
 const slots = useSlots();
 
@@ -15,6 +13,7 @@ const slots = useSlots();
 <div flex flex-col justify-center items-center class="fig-container">
   <span v-if="label" font-bold mb-1> {{  label }} </span>
   <slot />
+  <span v-if="caption" mt-1> {{  caption }} </span>
 </div>
 </template>
 

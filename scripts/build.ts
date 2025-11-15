@@ -23,7 +23,7 @@ function extractMetadataFromFile(filePath: string) {
   let title: string | null = null;
 
   if (titleMatch) {
-    title = titleMatch[1].trim();
+    title = titleMatch[1].replace(/\{.*/, "").trim();
   }
 
   return { date, title };
@@ -46,10 +46,11 @@ async function main() {
   
   const dest = `${dateString}-${name}`
 
-  console.log(dest)
+  console.log('writing to', dest)
 
-  // Build slides using slidev CLI directly (avoiding nested bun calls)
-  execSync(`pnpm slidev build ${src} --base /${dest}/ -o site/${dest}/`, { stdio: "inherit" })
+  const cmd = `pnpm slidev build ${src} --base /${dest}/ -o site/${dest}/`
+  console.log('running', cmd)
+  execSync(cmd, { stdio: "inherit" })
   
   // Prepend comment to index.html with source file information
   const indexPath = `site/${dest}/index.html`
@@ -57,7 +58,6 @@ async function main() {
   const comment = `<!-- Generated from: ${src} at ${generationDateTime} -->\n`
   const updatedContent = comment + htmlContent
   writeFileSync(indexPath, updatedContent, "utf-8")
-  console.log(`Added source comment to ${indexPath}`)
 
   // Create info.json with all relevant metadata
   const info = {

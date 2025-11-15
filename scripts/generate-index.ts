@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 import fs from "fs"
 import path from "path"
@@ -117,7 +117,7 @@ function generateHTML(versions: string[]): string {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>EyePlan Slides</title>
+      <title>Fred's Slides</title>
       <style>
         body {
           font-family: system-ui, -apple-system, sans-serif;

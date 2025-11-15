@@ -76,7 +76,7 @@ const slots = useSlots()
 
       <!-- Main slot is a flex-wrap -->
       <div class="default-layout h-70">
-        <div ref="defaultSlotRef" class="w-full h-full flex flex-wrap gap-3 min-h-0 overflow-visible items-center justify-evenly">
+        <div class="w-full h-full flex flex-wrap gap-3 min-h-0 overflow-visible items-center justify-evenly">
           <slot name="default" />
         </div>
       </div>
@@ -94,12 +94,12 @@ const slots = useSlots()
     </div>
 
     <!-- Citation slot -->
-    <div v-if="slots.cite" class="absolute -b3 -l3 text-sm fw-light text-gray-300">
+    <div v-if="slots.cite" class="absolute -b3 -l3 cite">
       <slot name="cite" />
     </div>
     
     <!-- Citation slot -->
-    <div v-if="slots.rcite" class="absolute -b3 -r3 text-sm fw-light text-gray-300">
+    <div v-if="slots.rcite" class="absolute -b3 -r3 cite">
       <slot name="rcite" />
     </div>
 
@@ -134,7 +134,7 @@ const slots = useSlots()
   @apply w-full
 }
 
-.default-layout img {
+.default-layout img:not([class*="object-"]) {
   /* max-width: 100%; */
   /* height: auto; */
   /* display: block; */

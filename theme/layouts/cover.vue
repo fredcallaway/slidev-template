@@ -13,9 +13,9 @@ const props = defineProps({
   <div class="slidev-layout cover grid h-full w-full place-items-center px-10">
     <div class="text-center text-xl font-light">
       <slot />
-      <div text-gray text-sm>
+      <!-- <div text-gray text-sm>
         {{ $frontmatter.date || new Date().toISOString().split('T')[0] }}
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ const props = defineProps({
   h1 {
     color: black;
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 100;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
