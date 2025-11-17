@@ -7,8 +7,6 @@ mdc: true
 colorSchema: 'light'
 contextMenu: false
 canvasWidth: 1600
-addons:
-  - slidev-component-scroll
 ---
 
 # A big title that is too darn long
