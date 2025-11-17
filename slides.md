@@ -57,7 +57,7 @@ Reward appears when gaze is nearby
 
 # Basic performance
 
-<img src='./figs/true-optimal/nfix_score.png' w-60 mt-2 />
+<img src='./fig/eyeplan/true-optimal/nfix_score.png' w-60 mt-2 />
 
 ---
 
@@ -67,13 +67,13 @@ Reward appears when gaze is nearby
 
 # Fixations by depth
 
-<img src='./figs/best-first/trial_props-depth.png' />
+<img src='./fig/eyeplan/best-first/trial_props-depth.png' />
 
 ---
 
 # Fixations by reward
 
-<img src='./figs/best-first/trial_props-reward-alt.png' />
+<img src='./fig/eyeplan/best-first/trial_props-reward-alt.png' />
 
 ---
 
@@ -90,9 +90,11 @@ Pfeifer & Foster (2013)
 
 ---
 
-# Rollouts
-
 <TrialViewer trials="pid=2&trial=30&timeline=0"  />
+
+<div v-click text-lg l30 t16 w40 tilt-l italic>
+  "rollouts"
+</div>
 
 ---
 
@@ -129,14 +131,14 @@ Pfeifer & Foster (2013)
 
 # Fixations by depth
 
-<img src='./figs/basic/trial_props-depth.png' />
+<img src='./fig/eyeplan/basic/trial_props-depth.png' />
 
 
 ---
 
 # Fixations by reward
 
-<img src='./figs/basic/trial_props-reward-alt.png' />
+<img src='./fig/eyeplan/basic/trial_props-reward-alt.png' />
 
 ---
 
@@ -157,14 +159,14 @@ Pfeifer & Foster (2013)
 # Saccades reflect local search
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./figs/basic/saccades-simple_type-deep.png' mt-10 scale-90/>
+<img src='./fig/eyeplan/basic/saccades-simple_type-deep.png' mt-10 scale-90/>
 
 ---
 
 # Child or sibling?
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./figs/basic/saccades-this_reward.png' mt-10 scale-90/>
+<img src='./fig/eyeplan/basic/saccades-this_reward.png' mt-10 scale-90/>
 
 
 ---
@@ -176,14 +178,14 @@ Pfeifer & Foster (2013)
 # Sophie's Choice (which child?)
 
 <img src='./omni/child-v-child.png' r0 t0 translate-y--1 w-18/>
-<img src='./figs/basic/which_child-action_value.png' mt-10/>
+<img src='./fig/eyeplan/basic/which_child-action_value.png' mt-10/>
 
 
 ---
 
 # Depth over time
 
-<img src='./figs/basic/saccades-time-depth-simple.png' />
+<img src='./fig/eyeplan/basic/saccades-time-depth-simple.png' />
 
 
 ---
@@ -263,13 +265,13 @@ hide: true
 
 # Fixations by depth
 
-<img src='./figs/capacity/trial_props-depth.png' />
+<img src='./fig/eyeplan/capacity/trial_props-depth.png' />
 
 ---
 
 # Fixations by reward
 
-<img src='./figs/capacity/trial_props-reward-alt.png' />
+<img src='./fig/eyeplan/capacity/trial_props-reward-alt.png' />
 
 
 ---
@@ -277,7 +279,7 @@ hide: true
 # Local search
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./figs/capacity/saccades-simple_type-deep.png' mt-10/>
+<img src='./fig/eyeplan/capacity/saccades-simple_type-deep.png' mt-10/>
 
 
 ---
@@ -285,14 +287,14 @@ hide: true
 # Child or sibling?
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./figs/capacity/saccades-this_reward.png' mt-10 />
+<img src='./fig/eyeplan/capacity/saccades-this_reward.png' mt-10 />
 
 ---
 
 # Which child?
 
 <img src='./omni/child-v-child.png' r0 t0 w-20/>
-<img src='./figs/capacity/which_child-action_value.png' mt-10/>
+<img src='./fig/eyeplan/capacity/which_child-action_value.png' mt-10/>
 
 ---
 
@@ -304,21 +306,21 @@ hide: true
 
 # Depth over time
 
-<img src='./figs/capacity/saccades-time-depth-simple.png' />
+<img src='./fig/eyeplan/capacity/saccades-time-depth-simple.png' />
 
 ---
 
 
 # Distant relatives
 
-<img src='./figs/capacity/saccades-complex_type.png' />
+<img src='./fig/eyeplan/capacity/saccades-complex_type.png' />
 
 
 ---
 
 # Pruning?
 
-<img src='./figs/capacity/lag-reward-child-first.png' />
+<img src='./fig/eyeplan/capacity/lag-reward-child-first.png' />
 
 <Pointer x=29 y=40 rot=5.5 v-click=1 />
 <Pointer x=85 y=40 rot=5.5 v-click=1 />
@@ -334,7 +336,7 @@ c.f. huys2012bonsai
 
 # Learning representations for planning
 
-<Profile name="Sixing Chen" src="./sixing.png" />
+<Profile name="Sixing Chen" src="/people/sixing.png" />
 
 <img src='./img/metamdp-rnn.png' mt-2 scale-90/>
 
@@ -342,7 +344,7 @@ c.f. huys2012bonsai
 
 # Learning representations for planning
 
-<Profile name="Sixing Chen" src="./sixing.png" />
+<Profile name="Sixing Chen" src="/people/sixing.png" />
 
 ![](./img/sixing-rnn-backups.png)
 
@@ -362,7 +364,7 @@ c.f. huys2012bonsai
 
 <img l0 src="./zhuojun/task.svg" mt-10 scale-95 style="clip-path: inset(50% 0 0 0);" />
 
-<Profile name="Zhuojun Ying" src="./zhuojun.avif"  />
+<Profile name="Zhuojun Ying" src="/people/zhuojun.avif"  />
 
 
 

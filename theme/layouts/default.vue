@@ -39,14 +39,6 @@ const slots = useSlots()
     <div l150 fixed w-5 h-100 z-100 @click="$slidev.nav.next()" />
     <div inset-0 fixed w-5 h-100 z-100 @click="$slidev.nav.prev()" />
 
-    <div v-if="slots.background" class="fixed inset-0 w-full h-full -z-1">
-      <slot name="background" />
-    </div>
-
-    <div v-if="slots.overlay" class="fixed inset-0 w-full h-full z-10">
-      <slot name="overlay" />
-    </div>
-
     <GridLines v-if="$slidev.configs.grid" />
 
     <!-- left right layout -->
@@ -82,7 +74,14 @@ const slots = useSlots()
       </div>
     </template>
 
+    <div v-if="slots.background" class="fixed inset-0 w-full h-full -z-1">
+      <slot name="background" />
+    </div>
 
+    <div v-if="slots.overlay" class="fixed inset-0 w-full h-full z-10">
+      <slot name="overlay" />
+    </div>
+    
     <!-- Bottom slot -->
     <div v-if="slots.bottom" class="b0 w-full text-center my-auto">
       <slot name="bottom" />

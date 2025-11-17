@@ -9,7 +9,7 @@ const homeLink = $slidev.configs.homeLink
 
 
 <template>
-  <Scroll/>
+  <Scroll />
   <header>
     <div absolute right-1 top-1 v-if="homeLink" >
       <a :href="homeLink">
