@@ -30,7 +30,7 @@ NYU & Harvard
 
 ---
 src: ./pages/intro/intro.md
-hide: true
+hide: false
 ---
 
 ---
@@ -52,6 +52,11 @@ hide: false
 
 ---
 src: ./pages/attention/attention.md
+hide: false
+---
+
+---
+src: ./pages/memory/memory.md
 hide: false
 ---
 ---
@@ -80,13 +85,19 @@ hide: false
 
 ## what next?
 
+
+---
+src: ./pages/zhuojun/zhuojun.md
+---
+
+
 ---
 
 # Learning representations for planning
 
 <Profile name="Sixing Chen" src="/people/sixing.png" />
 
-<img src='./img/metamdp-rnn.png' mt-2 scale-90/>
+<img src='./img/metamdp-rnn.png' scale-85/>
 
 ---
 
@@ -105,28 +116,21 @@ hide: false
 
 
 ---
-src: ./pages/zhuojun/zhuojun.md
----
 
-# Cultural evolution of compositional abstractions
+# Data-driven computational psychiatry
 
-<div b0 r0 w76 h80 bg-white v-click.hide />
+<Switch>
+  <img full src='./pages/psychiatry/slides/psychiatry01.png' />
+  <img full src='./pages/psychiatry/slides/psychiatry02.png' />
+  <img full src='./pages/psychiatry/slides/psychiatry03.png' />
+  <img full src='./pages/psychiatry/slides/psychiatry04.png' />
+</Switch>
 
-<img src='./img/culture-model.svg' />
 
-<!-- <img src='./img/comp-social.png' l87 t18 w50 /> -->
-
----
-
-### is that it?
-
----
-
-## Nope!
-
-<Box v-click l16 t15 tilt-l label="computational<br>psychiatry"  />
-<Box v-click r15 t30 rotate-15 label="metacognitive control<br>of memory recall" />
-<Box v-click l30 t60 rotate-5 label="computer-assisted<br>decision making" />
+<div v-click=2 t-6 l-3 text-xl font-italic font-bold style="color: hsl(23, 100%, 66%)">
+  <span style="vertical-align: baseline; position: relative; top: 0.8em;">^</span>
+  process
+</div>
 
 ---
 
@@ -150,9 +154,11 @@ src: ./pages/zhuojun/zhuojun.md
 </div>
 
 
-<div r2 b1 text-gray-500>fredcallaway@gmail.com</div>
+<div r2 b1 text-gray-500 font-mono text-sm>fredcallaway@gmail.com</div>
 
 ---
 
 
-### that's all folks!
+### thanks!
+
+<div r2 b1 text-gray-500 font-mono text-sm>fredcallaway@gmail.com</div>

@@ -1,7 +1,4 @@
 
-
----
-
 # WM maintenance for planning
 
 <img src='./img/model.svg' full scale-95/>

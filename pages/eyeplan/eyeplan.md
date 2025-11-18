@@ -314,5 +314,3 @@ hide: true
 
 ::cite::
 c.f. huys2012bonsai
-
----

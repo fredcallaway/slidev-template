@@ -94,7 +94,7 @@ Callaway, Rangel, Griffiths _PLoS Comp Biol_ (2021)
 
 ---
 
-# Application: inferring preference from gaze
+# Extension: Inferring preference from gaze
 
 <img w-1 src='./img/2025-11-17-22-30-57.png' />
 <img v-click scale-90 w-1 src='./img/2025-11-17-22-30-15.png' />
