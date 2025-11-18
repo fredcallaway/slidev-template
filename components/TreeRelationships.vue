@@ -24,8 +24,8 @@ const props = withDefaults(defineProps<{
 }>(), {
   height: 3,
   query: 'root',
-  w: '220px',
-  h: '220px',
+  w: '250px',
+  h: '250px',
 })
 
 
@@ -97,6 +97,7 @@ const graphStyle = {
     // backgroundColor: '#ff9553',
     label: '?',
     fontWeight: 'bold',
+    fontSize: 19,
   },
   'node.highlight': {
     backgroundColor: '#ff9553',
