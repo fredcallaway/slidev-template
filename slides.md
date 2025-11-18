@@ -9,25 +9,32 @@ mdc: true
 colorSchema: 'light'
 contextMenu: false
 canvasWidth: 1600
-layout: default
+outline: |
+  - planning as information seeking
+  - human planners seek information rationally
+  - human planners _maintain_ information rationally
+  - or maybe they don't: an eye-tracking study
 ---
 
-# Cognition as action
+# cognition as action
 
+
+Fred Callaway
+
+<Date />
 
 ---
-src: ./pages/theory.md
+src: ./pages/theory/theory.md
 hide: true
 ---
 
 ---
-src: ./pages/attention.md
+src: ./pages/attention/attention.md
 hide: true
 ---
 
-
 ---
-src: ./pages/eyeplan.md
+src: ./pages/eyeplan/eyeplan.md
 hide: true
 ---
 

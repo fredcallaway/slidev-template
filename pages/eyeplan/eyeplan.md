@@ -11,8 +11,37 @@ canvasWidth: 1600
 layout: default
 ---
 
+
+# Example: route-planning
+
+::background::
+
+<Switch>
+  <img src="./robot-example/agents.png" />
+  <img src="./robot-example/avoid.png" />
+  
+</Switch>
+
+
+---
+
+# Example: route-planning
+
+::background::
+
+<div t8 l88 font-bold>Time: </div>
+<TimeBar :duration="10000" t9 l100/>
+
+<img src="./robot-example/example full.png" />
+
+---
+
+### time's up! {.text-xs}
+
+---
+
 <SimpleFrame scale-135 translate-y-13 full
-  src="/graphnav-demo/index.html?block=main&fast=1&hover_rewards=0&hover_edges=0&two_stage=0"
+  src="./graphnav-demo/index.html?block=main&fast=1&hover_rewards=0&hover_edges=0&two_stage=0"
   scrolling="no"
   width="700"
   height="800"
