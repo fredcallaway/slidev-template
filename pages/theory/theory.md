@@ -1,3 +1,4 @@
+
 <Switch>
     <img full src="./slides/theory.001.png" />
     <img full src="./slides/theory.002.png" />
@@ -13,6 +14,7 @@
     <img full src="./slides/theory.012.png" />
     <img full src="./slides/theory.013.png" />
 </Switch>
+
 ---
 
 <Switch>
@@ -39,6 +41,7 @@
     <!-- <img full src="./slides/theory.034.png" /> -->
     <img full src="./slides/theory.035.png" />
 </Switch>
+
 ---
 
 <Switch>
@@ -50,6 +53,7 @@
     <img full src="./slides/theory.041.png" />
     <img full src="./slides/theory.042.png" />
 </Switch>
+
 ---
 
 <Switch>

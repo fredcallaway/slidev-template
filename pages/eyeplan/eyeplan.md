@@ -1,47 +1,6 @@
----
-theme: ./theme
-titleTemplate: "%s"
-drawings:
-  persist: false
-transition: none
-mdc: true
-colorSchema: 'light'
-contextMenu: false
-canvasWidth: 1600
-layout: default
----
-
-
-# Example: route-planning
-
-::background::
-
-<Switch>
-  <img src="./robot-example/agents.png" />
-  <img src="./robot-example/avoid.png" />
-  
-</Switch>
-
-
----
-
-# Example: route-planning
-
-::background::
-
-<div t8 l88 font-bold>Time: </div>
-<TimeBar :duration="10000" t9 l100/>
-
-<img src="./robot-example/example full.png" />
-
----
-
-### time's up! {.text-xs}
-
----
 
 <SimpleFrame scale-135 translate-y-13 full
-  src="./graphnav-demo/index.html?block=main&fast=1&hover_rewards=0&hover_edges=0&two_stage=0"
+  src="/graphnav-demo/index.html?block=main&fast=1&hover_rewards=0&hover_edges=0&two_stage=0"
   scrolling="no"
   width="700"
   height="800"
@@ -85,7 +44,7 @@ Reward appears when gaze is nearby
 
 # Basic performance
 
-<img src='./fig/eyeplan/true-optimal/nfix_score.png' w-60 mt-2 />
+<img src='./fig/true-optimal/nfix_score.png' w-60 mt-2 />
 
 ---
 
@@ -95,13 +54,13 @@ Reward appears when gaze is nearby
 
 # Fixations by depth
 
-<img src='./fig/eyeplan/best-first/trial_props-depth.png' />
+<img src='./fig/best-first/trial_props-depth.png' />
 
 ---
 
 # Fixations by reward
 
-<img src='./fig/eyeplan/best-first/trial_props-reward-alt.png' />
+<img src='./fig/best-first/trial_props-reward-alt.png' />
 
 ---
 
@@ -159,14 +118,14 @@ Pfeifer & Foster (2013)
 
 # Fixations by depth
 
-<img src='./fig/eyeplan/basic/trial_props-depth.png' />
+<img src='./fig/basic/trial_props-depth.png' />
 
 
 ---
 
 # Fixations by reward
 
-<img src='./fig/eyeplan/basic/trial_props-reward-alt.png' />
+<img src='./fig/basic/trial_props-reward-alt.png' />
 
 ---
 
@@ -187,14 +146,14 @@ Pfeifer & Foster (2013)
 # Saccades reflect local search
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./fig/eyeplan/basic/saccades-simple_type-deep.png' mt-10 scale-90/>
+<img src='./fig/basic/saccades-simple_type-deep.png' mt-10 scale-90/>
 
 ---
 
 # Child or sibling?
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./fig/eyeplan/basic/saccades-this_reward.png' mt-10 scale-90/>
+<img src='./fig/basic/saccades-this_reward.png' mt-10 scale-90/>
 
 
 ---
@@ -205,15 +164,15 @@ Pfeifer & Foster (2013)
 
 # Sophie's Choice (which child?)
 
-<img src='./omni/child-v-child.png' r0 t0 translate-y--1 w-18/>
-<img src='./fig/eyeplan/basic/which_child-action_value.png' mt-10/>
+<img src='./img/child-v-child.png' r0 t0 translate-y--1 w-18/>
+<img src='./fig/basic/which_child-action_value.png' mt-10/>
 
 
 ---
 
 # Depth over time
 
-<img src='./fig/eyeplan/basic/saccades-time-depth-simple.png' />
+<img src='./fig/basic/saccades-time-depth-simple.png' />
 
 
 ---
@@ -293,13 +252,13 @@ hide: true
 
 # Fixations by depth
 
-<img src='./fig/eyeplan/capacity/trial_props-depth.png' />
+<img src='./fig/capacity/trial_props-depth.png' />
 
 ---
 
 # Fixations by reward
 
-<img src='./fig/eyeplan/capacity/trial_props-reward-alt.png' />
+<img src='./fig/capacity/trial_props-reward-alt.png' />
 
 
 ---
@@ -307,7 +266,7 @@ hide: true
 # Local search
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./fig/eyeplan/capacity/saccades-simple_type-deep.png' mt-10/>
+<img src='./fig/capacity/saccades-simple_type-deep.png' mt-10/>
 
 
 ---
@@ -315,14 +274,14 @@ hide: true
 # Child or sibling?
 
 <img src='./img/relationships.svg' r0 t0 w-25/>
-<img src='./fig/eyeplan/capacity/saccades-this_reward.png' mt-10 />
+<img src='./fig/capacity/saccades-this_reward.png' mt-10 />
 
 ---
 
 # Which child?
 
-<img src='./omni/child-v-child.png' r0 t0 w-20/>
-<img src='./fig/eyeplan/capacity/which_child-action_value.png' mt-10/>
+<img src='./img/child-v-child.png' r0 t0 w-20/>
+<img src='./fig/capacity/which_child-action_value.png' mt-10/>
 
 ---
 
@@ -334,21 +293,21 @@ hide: true
 
 # Depth over time
 
-<img src='./fig/eyeplan/capacity/saccades-time-depth-simple.png' />
+<img src='./fig/capacity/saccades-time-depth-simple.png' />
 
 ---
 
 
 # Distant relatives
 
-<img src='./fig/eyeplan/capacity/saccades-complex_type.png' />
+<img src='./fig/capacity/saccades-complex_type.png' />
 
 
 ---
 
 # Pruning?
 
-<img src='./fig/eyeplan/capacity/lag-reward-child-first.png' />
+<img src='./fig/capacity/lag-reward-child-first.png' />
 
 <Pointer x=29 y=40 rot=5.5 v-click=1 />
 <Pointer x=85 y=40 rot=5.5 v-click=1 />

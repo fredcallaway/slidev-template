@@ -30,6 +30,7 @@ NYU & Harvard
 
 ---
 src: ./pages/intro/intro.md
+hide: true
 ---
 
 ---
@@ -42,13 +43,33 @@ src: ./pages/intro/intro.md
 
 ---
 src: ./pages/theory/theory.md
-hide: true
+hide: false
 ---
 
 ---
-src: ./pages/attention/attention.md
-hide: true
+
+<OutlineTransition at=2 />
+
 ---
+src: ./pages/attention/attention.md
+hide: false
+---
+---
+
+<OutlineTransition at=3 />
+
+---
+src: ./pages/planning/planning.md
+hide: false
+---
+
+---
+src: ./pages/planning22/planning22.md
+hide: false
+---
+---
+
+<OutlineTransition at=4 />
 
 ---
 src: ./pages/eyeplan/eyeplan.md
@@ -87,9 +108,9 @@ hide: false
 
 # WM maintenance for planning
 
-<img l0 v-click src="./zhuojun/task.svg" mt-10 scale-95 style="clip-path: inset(0% 0% 50% 0%);" />
+<img l0 v-click src="./pages/zhuojun/task.svg" mt-10 scale-95 style="clip-path: inset(0% 0% 50% 0%);" />
 
-<img l0 src="./zhuojun/task.svg" mt-10 scale-95 style="clip-path: inset(50% 0 0 0);" />
+<img l0 src="./pages/zhuojun/task.svg" mt-10 scale-95 style="clip-path: inset(50% 0 0 0);" />
 
 <Profile name="Zhuojun Ying" src="/people/zhuojun.avif"  />
 
@@ -99,8 +120,8 @@ hide: false
 
 # Iterated rate-distortion for planning
 
-<img src='./zhuojun/model.svg' full scale-95/>
-<Profile name="Zhuojun Ying" src="./zhuojun.avif"  />
+<img src='./pages/zhuojun/model.svg' full scale-95/>
+<Profile name="Zhuojun Ying" src="/people/zhuojun.avif"  />
 
 <Box r48 b24 w37 tilt shadow-xl italic>
   variational RNN
@@ -117,13 +138,13 @@ in CogSci 2024 & 2025
 <div flex flex-row gap-10 mt-5>
   <div text-center>
     <div ml-25 font-bold translate-y-5>participants</div>
-    <img src="./zhuojun/6n_human/path_rank_discrete.svg" w-60 /></div>
+    <img src="./pages/zhuojun/6n_human/path_rank_discrete.svg" w-60 /></div>
   <div text-center>
     <div ml-25 font-bold translate-y-5>model</div>
-    <img src="./zhuojun/6n_model/path_rank_discrete.svg" w-60 /></div>
+    <img src="./pages/zhuojun/6n_model/path_rank_discrete.svg" w-60 /></div>
 </div>
 
-<Profile name="Zhuojun Ying" src="./zhuojun.avif"  />
+<Profile name="Zhuojun Ying" src="/people/zhuojun.avif"  />
 <p l0 b0>
   <span font-500 text="#cbc9dc">exposure</span>
   <br>
@@ -139,13 +160,13 @@ in CogSci 2024 & 2025
 <div flex flex-row gap-10 mt-5 ml-10>
   <div text-center>
     <div ml-25 font-bold translate-y-10>participants</div>
-    <img src="./zhuojun/6n_human/other_reward_discrete.svg" w-60 /></div>
+    <img src="./pages/zhuojun/6n_human/other_reward_discrete.svg" w-60 /></div>
   <div text-center>
     <div ml-25 font-bold translate-y-10>model</div>
-    <img src="./zhuojun/6n_model/other_reward_discrete.svg" w-60 /></div>
+    <img src="./pages/zhuojun/6n_model/other_reward_discrete.svg" w-60 /></div>
 </div>
 
-<Profile name="Zhuojun Ying" src="./zhuojun.avif"  />
+<Profile name="Zhuojun Ying" src="/people/zhuojun.avif"  />
 <p l0 b0>
   <span font-500 text="#cbc9dc">exposure</span>
   <br>
