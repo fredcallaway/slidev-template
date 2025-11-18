@@ -3,11 +3,11 @@ import { ref, onMounted } from 'vue'
 import { useNav } from '@slidev/client'
 import { whenever } from '@vueuse/core'
 
-const { clicks } = useNav()
+// const { clicks } = useNav()
 
-whenever(() => clicks.value > 0, () => {
-  shown.value = true
-})
+// whenever(() => clicks.value > 0, () => {
+//   shown.value = true
+// })
 
 const shown = ref(false)
 
