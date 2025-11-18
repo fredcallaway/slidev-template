@@ -30,7 +30,7 @@ export default {
   props: {
     at: {
       type: [Number, String],
-      default: '',
+      default: '1',
     }
   },
   render() {
