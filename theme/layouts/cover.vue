@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, useSlots } from 'vue'
 
 const props = defineProps({
   color: {
@@ -7,15 +7,14 @@ const props = defineProps({
   },
 })
 
+const slots = useSlots()
+
 </script>
 
 <template>
-  <div class="slidev-layout cover grid h-full w-full place-items-center px-10">
-    <div class="text-center text-xl font-light">
-      <slot />
-      <!-- <div text-gray text-sm>
-        {{ $frontmatter.date || new Date().toISOString().split('T')[0] }}
-      </div> -->
+  <div class="slidev-layout cover">
+    <div text-center text-xl  mt-60 h-20 text-gray-800 fw-300>
+    <slot />
     </div>
   </div>
 </template>
@@ -23,11 +22,6 @@ const props = defineProps({
 <style>
 
 .cover {
-  
-  * {
-    /* @apply text-gray-300; */
-    font-weight: 200;
-  }
 
   h1 {
     color: black;
@@ -35,6 +29,12 @@ const props = defineProps({
     font-weight: 100;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    width: 100%;
+    padding: 1rem;
+    z-index: 100;
   }
 }
 </style>
