@@ -10,10 +10,10 @@ colorSchema: 'light'
 contextMenu: false
 canvasWidth: 1600
 outline: |
-  - planning as information seeking
-  - human planners seek information rationally
-  - human planners _maintain_ information rationally
-  - or maybe they don't: an eye-tracking study
+  - cognition as action
+  - optimal attention in preferential choice
+  - optimal planning algorithms
+  - working memory constraints might be important
 ---
 
 # cognition as action
@@ -21,7 +21,24 @@ outline: |
 
 Fred Callaway
 
-<Date />
+NYU & Harvard
+
+<Box w30 l100 b19 tilt text-dartmouth border-dartmouth text-lg>
+  <span italic text-sm>starting fall '26</span>
+  Dartmouth!
+</Box>
+
+---
+src: ./pages/intro/intro.md
+---
+
+---
+
+<Outline click/>
+
+---
+
+<Outline at=1 />
 
 ---
 src: ./pages/theory/theory.md
@@ -35,7 +52,7 @@ hide: true
 
 ---
 src: ./pages/eyeplan/eyeplan.md
-hide: true
+hide: false
 ---
 
 ---

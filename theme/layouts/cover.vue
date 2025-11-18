@@ -13,7 +13,7 @@ const slots = useSlots()
 
 <template>
   <div class="slidev-layout cover">
-    <div text-center text-xl  mt-60 h-20 text-gray-800 fw-300>
+    <div text-center text-xl  mt-60 h-20 text-gray-400 fw-200>
     <slot />
     </div>
   </div>

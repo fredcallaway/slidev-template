@@ -65,7 +65,7 @@ const listItems = computed(() => {
 }
 
 .outline-container ul, ol {
-  @apply flex flex-col justify-between h-60 w-150 text-xl;
+  @apply flex flex-col justify-between w-150 text-xl t20 l0 gap-5;
 }
 
 .outline-container li.fade {
