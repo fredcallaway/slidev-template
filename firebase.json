@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "slifred",
     "public": "site",
     "ignore": [
       "firebase.json",
@@ -8,6 +9,8 @@
     ],
     "rewrites": [
       {
+        "source": "/2025-10-29-crete-control/**",
+        "destination": "/2025-10-29-crete-control/index.html"
       }
     ]
   }
