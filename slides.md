@@ -10,6 +10,7 @@ canvasWidth: 1600
 ---
 
 # A big title that is too darn long
+<Date />
 
 ---
 
@@ -18,10 +19,11 @@ canvasWidth: 1600
 <GridLines major />
 
 <!-- todo: option to corner positions instead  -->
-<Box bg-blue l5 t10 w100 h40 />
+<Box bg-green l5 t10 w100 h40 />
 <Box bg-red h10 w10 r10 t10 />
-<Box bord bg-white l10 t20 w10 h10 label="A" font-bold text-2xl/>
-<Box bg-black l5 b10 w100 h10 />
+<Box bg-black border-red text-white l10 t20 w10 h10 label="A" font-bold />
+<Box bg-amber border-4 b10 w130 h10 />
+<!-- <PosBox x=80 y=40 w=44 h=24 /> -->
 
 ---
 

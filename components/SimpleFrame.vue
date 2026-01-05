@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useNav } from '@slidev/client'
-import { whenever } from '@vueuse/core'
-
-const { clicks } = useNav()
-
-whenever(() => clicks.value > 0, () => {
-  shown.value = true
-})
+import { ref } from 'vue'
 
 const shown = ref(false)
 

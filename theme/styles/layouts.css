@@ -126,9 +126,6 @@
 }
 
 
-.flexlist ul, .flexlist ol {
-  @apply flex flex-col justify-between h-full w-150 text-xl;
-}
 /* .flexlist {
   @apply h-full;
 } */

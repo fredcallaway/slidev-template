@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="462 500 315 288" width="315" height="288">
+  <defs/>
+  <g id="relationships" stroke-opacity="1" stroke-dasharray="none" stroke="none" fill="none" fill-opacity="1">
+    <title>relationships</title>
+    <g id="relationships_Layer_2">
+      <title>Layer 2</title>
+      <g id="Graphic_84">
+        <circle cx="625" cy="528" r="25.0000399475474" fill="#d53a26"/>
+        <circle cx="625" cy="528" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_85">
+        <circle cx="537.5" cy="625" r="25.0000399475474" fill="white"/>
+        <circle cx="537.5" cy="625" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_86">
+        <circle cx="712.5" cy="625" r="25.0000399475474" fill="#9159b2"/>
+        <circle cx="712.5" cy="625" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_87">
+        <circle cx="675" cy="725" r="25.0000399475474" fill="white"/>
+        <circle cx="675" cy="725" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_88">
+        <circle cx="500" cy="725" r="25.0000399475474" fill="#049dc8"/>
+        <circle cx="500" cy="725" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_89">
+        <circle cx="575" cy="725" r="25.0000399475474" fill="#049dc8"/>
+        <circle cx="575" cy="725" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_90">
+        <circle cx="750" cy="725" r="25.0000399475474" fill="white"/>
+        <circle cx="750" cy="725" r="25.0000399475474" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Line_129">
+        <line x1="606.9147" y1="548.0488" x2="555.5853" y2="604.9512" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Line_130">
+        <line x1="528.01735" y1="650.2871" x2="509.48265" y2="699.7129" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Line_131">
+        <line x1="546.98265" y1="650.2871" x2="565.51735" y2="699.7129" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Line_132">
+        <line x1="643.0853" y1="548.0488" x2="694.4147" y2="604.9512" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Line_133">
+        <line x1="703.01735" y1="650.2871" x2="684.48265" y2="699.7129" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Line_134">
+        <line x1="721.98265" y1="650.2871" x2="740.51735" y2="699.7129" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+      </g>
+      <g id="Graphic_165">
+        <text transform="translate(467.5 751)" fill="#049dc8">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="26" fill="#049dc8" x="39.66455" y="25" xml:space="preserve">child</tspan>
+        </text>
+      </g>
+      <g id="Graphic_166">
+        <text transform="translate(505 509.5)" fill="#d53a26">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="26" fill="#d53a26" x="10.540039" y="25" xml:space="preserve">parent</tspan>
+        </text>
+      </g>
+      <g id="Graphic_167">
+        <text transform="translate(592.5 609.5)" fill="#9159b2">
+          <tspan font-family="Helvetica" font-weight="bold" font-size="26" fill="#9159b2" x="6.223633" y="25" xml:space="preserve">sibling</tspan>
+        </text>
+      </g>
+      <g id="Graphic_199">
+        <path d="M 544.5526 622.3931 C 544.85517 623.20776 545.0181 624.069 545.0181 625 C 545.0181 629.1431 541.6431 632.5181 537.5 632.5181 C 533.3569 632.5181 529.9819 629.1431 529.9819 625 C 529.9819 620.8569 533.3569 617.4819 537.5 617.4819 C 538.40776 617.4819 539.29224 617.6448 540.1069 617.9474 C 539.1526 618.50604 538.52414 619.55345 538.52414 620.7405 C 538.52414 622.53276 539.9905 623.99914 541.78276 623.99914 C 542.94655 623.97586 543.99396 623.3474 544.5526 622.3931 Z M 557.77326 625 L 557.40085 625.72155 C 554.0491 632.07586 546.1586 638.5 537.5 638.5 C 528.8414 638.5 520.9509 632.0526 517.6224 625.72155 L 517.22674 625 L 517.6224 624.27845 C 520.9509 617.92414 528.8414 611.5 537.5 611.5 C 546.1586 611.5 554.0491 617.92414 557.40085 624.27845 L 557.77326 625 Z M 554.4681 625 C 551.3724 619.7629 544.6224 614.4793 537.5 614.4793 C 530.3776 614.4793 523.6043 619.7629 520.5319 625 C 523.6276 630.2138 530.3776 635.5207 537.5 635.5207 C 544.6224 635.5207 551.3957 630.2138 554.4681 625 Z" fill="black"/>
+      </g>
+    </g>
+  </g>
+</svg>

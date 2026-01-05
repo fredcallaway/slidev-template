@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, useAttrs } from 'vue'
 
 const props = defineProps<{
   label?: string
@@ -16,14 +16,19 @@ const props = defineProps<{
   x?: string
 }>()
 
+const attrs = Object.keys(useAttrs())
+
 const positionStyles = computed(() => {
   const styles: Record<string, string> = {
     position: 'absolute'
   }
 
+  const hasWidth = attrs.some(attr => /w\d+/.test(attr) || attr.startsWith('w-'))
+  const hasHeight = attrs.some(attr => /h\d+/.test(attr) || attr.startsWith('h-'))
+
   // Size props (multiply by 10 to convert to pixels, default to 10 if not provided)
-  styles.height = `${parseFloat(props.h || '10') * 10}px`
-  styles.width = `${parseFloat(props.w || '10') * 10}px`
+  styles.height = !hasHeight ? `${parseFloat(props.h || '10') * 10}px` : ''
+  styles.width = !hasWidth ? `${parseFloat(props.w || '10') * 10}px` : ''
 
   // Corner positioning takes precedence over center positioning
   // Earlier props (t, l, r, b) take precedence over later ones (x, y)
@@ -52,11 +57,21 @@ const positionStyles = computed(() => {
   return styles
 })
 
+const classes = computed(() => {
+  const hasBackground = attrs.some(attr => attr.startsWith('bg-'))
+  const hasBorderWidth = attrs.some(attr => /border-\d+.*/.test(attr))
+  return {
+    'bg-white': !hasBackground,
+    'border-6': !hasBorderWidth
+    
+  }
+})
+
 </script>
 
 <template>
 
-  <div :style="positionStyles" px-2 flex-center bg-white border="~ black 6 solid" shadow-xl text-center font-500 >
+  <div :style="positionStyles" :class="classes" px-2 flex-center shadow-xl text-center font-500 >
     <div v-if="label" v-html="label" />
     <div v-else>
       <slot />

@@ -18,9 +18,12 @@ will be rendered as
 
 -->
 
+
 <script>
 import { h } from 'vue'
 import VSwitch from '@slidev/client/builtin/VSwitch.ts'
+
+const isCommentNode = (node) => String(node.type) == 'Symbol(v-cmt)'
 
 export default {
   // name: 'FSwitch',
@@ -32,11 +35,13 @@ export default {
   },
   render() {
     const children = this.$slots.default?.() || []
+    console.log('children', children.length)
 
     const namedSlots = {}
-    children.forEach((vnode, index) => {
+    children.filter(vnode => !isCommentNode(vnode)).forEach((vnode, index) => {
       namedSlots[index.toString()] = () => [vnode]
     })
+    console.log('namedSlots', Object.keys(namedSlots).length)
 
     return h(VSwitch, {
       at: this.at,

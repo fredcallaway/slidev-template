@@ -65,6 +65,7 @@ export default defineConfig({
       // green: '#69d96c',
       // purple: '#be85ff',
       // pink: '#f187d0',
+      dartmouth: "#2C6842",
 
       baseline: "#5FA3B4",
       bias: "#E1C67C",

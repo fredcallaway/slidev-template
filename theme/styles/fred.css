@@ -29,6 +29,10 @@
   display: none;
 }
 
+div {
+  border-color: black
+}
+
 /* drawing */
 #app .slidev-drawing-controls {
   @apply scale-30 w-250 origin-bottom-left;
@@ -49,7 +53,7 @@ nav {
 
 /* customize the v-clicks */
 .slidev-vclick-target {
-  transition: opacity 0ms;
+  transition: opacity 0ms !important;
 }
 
 .slidev-vclick-hidden {
@@ -67,4 +71,8 @@ nav {
 /* markdown-it-footnotes */
 .footnotes-sep {
   visibility: hidden;
+}
+
+.flexlist ul, .flexlist ol {
+  @apply flex flex-col justify-between h-full w-150 text-xl;
 }
