@@ -17,7 +17,7 @@ export default defineConfig({
       'tilt': 'rotate-10',
       'tilt-l': '-rotate-10',
       'full': 'fixed inset-0 h-full w-full',
-      'flex-fixed': 'flex-shrink-0 flex-grow-0',
+      'flex-fixed': 'flex-shrink-0! flex-grow-0!',
       'cover': 'object-cover!',
       'cite': 'text-sm fw-light text-gray-400',
     },
