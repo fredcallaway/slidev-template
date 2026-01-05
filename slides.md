@@ -31,7 +31,7 @@ canvasWidth: 1600
 
 This text describes the image that you see. It is somewhat long but not that long.
 
-<img src="https://dummyimage.com/500x500"/>
+<img src="https://dummyimage.com/500x500" h50 />
 
 ---
 
@@ -39,7 +39,15 @@ This text describes the image that you see. It is somewhat long but not that lon
 
 This text describes the image that you see. It is somewhat long but not that long.
 
-<img src="https://dummyimage.com/2000x500" w-100/>
+<img src="https://dummyimage.com/2000x500" />
+
+---
+
+# Unreasonably tall image
+
+This text describes the image that you see. It is somewhat long but not that long.
+
+<img src="https://dummyimage.com/500x2000" />
 
 ---
 
@@ -52,40 +60,27 @@ This text describes the image that you see. It is somewhat long but not that lon
 
 ---
 
-# flex-1
+# Use `min-w-0` to make images shrink to fit
 
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
+<img min-w-0 src="https://dummyimage.com/500x500"/>
+<img min-w-0 src="https://dummyimage.com/500x500"/>
+<img min-w-0 src="https://dummyimage.com/500x500"/>
+<img min-w-0 src="https://dummyimage.com/500x500"/>
 
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
-
-<div flex-1 mx-2>
-<img src="https://dummyimage.com/1000x1000"/>
-</div>
 
 ::bottom::
 Wow look at this text!
-
-::cite::
-Callaway
 
 ---
 
 # Using `<div col/>`
 
-<div col bord>
+<div column bord>
 <img src="https://dummyimage.com/1500x500"/>
 This text describes the image that you see. It is somewhat long but not that long.
 </div>
 
-<div col bord>
+<div column bord>
 <img src="https://dummyimage.com/1500x500"/>
 This image looks the same. But it is actually different!
 </div>
