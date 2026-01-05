@@ -27,36 +27,46 @@ canvasWidth: 1600
 
 ---
 
-# Reasonable images
+# Tall image
 
-This text describes the image that you see. It is somewhat long but not that long.
+This text describes the image that you see. 
 
-<img src="https://dummyimage.com/500x500" h50 />
+<img src="https://dummyimage.com/500x1500"  />
 
 ---
 
-# Unreasonably wide image
+# Long captions
 
+This text describes the image that you see. 
+This text describes the image that you see. 
+This text describes the image that you see. 
+This text describes the image that you see. 
+This text describes the image that you see. 
+This text describes the image that you see. 
+This text describes the image that you see.
+This text describes the image that you see.
+
+<img src="https://dummyimage.com/500x500"  />
+
+---
+
+# Wide image
+
+This text describes the image that you see. It is somewhat long but not that long.
 This text describes the image that you see. It is somewhat long but not that long.
 
 <img src="https://dummyimage.com/2000x500" />
 
 ---
 
-# Unreasonably tall image
-
-This text describes the image that you see. It is somewhat long but not that long.
-
-<img src="https://dummyimage.com/500x2000" />
-
----
-
 # Using `<flex>` to align images and text
 
-<flex>
-This text describes the image that you see. It is somewhat long but not that long.
-<img src="https://dummyimage.com/2000x500" w100/>
-</flex>
+<div flex gap-2>
+This text describes the image that you see. 
+This text describes the image that you see. 
+This text describes the image that you see. 
+<img src="https://dummyimage.com/2000x500" w100 />
+</div>
 
 ---
 
@@ -75,13 +85,13 @@ Wow look at this text!
 
 # Using `<div col/>`
 
-<div column bord>
-<img src="https://dummyimage.com/1500x500"/>
+<div column bord flex-1>
+<img flex-fixed src="https://dummyimage.com/1500x500"/>
 This text describes the image that you see. It is somewhat long but not that long.
 </div>
 
-<div column bord>
-<img src="https://dummyimage.com/1500x500"/>
+<div column bord flex-1>
+<img flex-fixed src="https://dummyimage.com/1500x500"/>
 This image looks the same. But it is actually different!
 </div>
 
@@ -89,17 +99,17 @@ This image looks the same. But it is actually different!
 
 # Using `<div col/>`
 
-<div col bord flex-2>
+<div column bord flex-1>
 <img src="https://dummyimage.com/1500x500"/>
 This text describes the image that you see. It is somewhat long but not that long.
 </div>
 
-<div col bord flex-1>
+<div column bord flex-1>
 <img src="https://dummyimage.com/1500x500"/>
 This image looks the same. But it is actually different!
 </div>
 
-<div col bord flex-1>
+<div column bord flex-1>
 <img src="https://dummyimage.com/1500x500"/>
 This image looks the same. But it is actually different!
 </div>
@@ -113,9 +123,9 @@ This image looks the same. But it is actually different!
 This text describes the image that you see. It is somewhat long but not that long.
 But there is a problem.
 
-<flex gap-2>
-  <img src="https://dummyimage.com/2000x500" flex-1/>
-  <img src="https://dummyimage.com/2000x500" flex-1/>
+<flex gap-2 w-150>
+  <img src="https://dummyimage.com/2000x500" />
+  <img src="https://dummyimage.com/2000x500" />
 </flex>
 
 ---

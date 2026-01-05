@@ -137,13 +137,20 @@ const slots = useSlots()
   /* max-width: 100%; */
   /* height: auto; */
   /* display: block; */
-  @apply flex-1 max-h-full max-w-full;
+  @apply shrink-1 grow-1 basis-1 max-h-full max-w-full;
+  /* @apply min-w-0; */
   object-fit: contain
 }
 
-.default-layout img.flex-fixed {
-  @apply flex-shrink-0 flex-grow-0
+.default-layout p {
+  @apply shrink-1 grow-1 basis-1 max-h-full max-w-full;
+  /* @apply min-w-0; */
 }
+
+/* I think this is handled in uno */
+/* .default-layout img.flex-fixed {
+  @apply flex-shrink-0 flex-grow-0
+} */
 
 /* .default-layout ol, ul {
   height: 700px;
