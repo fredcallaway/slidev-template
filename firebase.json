@@ -9,6 +9,14 @@
     ],
     "rewrites": [
       {
+        "source": "/2026-01-24-dartmouth/**",
+        "destination": "/2026-01-24-dartmouth/index.html"
+      },
+      {
+        "source": "/2025-11-18-slides/**",
+        "destination": "/2025-11-18-slides/index.html"
+      },
+      {
         "source": "/2025-10-29-crete-control/**",
         "destination": "/2025-10-29-crete-control/index.html"
       }
