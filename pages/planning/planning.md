@@ -53,9 +53,9 @@
 
 # The problem
 
-<Box v-drag="[415,108,500,190,8]" v-click=1 >
+<OldBox v-drag="[415,108,500,190,8]" v-click=1 !bg-red !border-red !text-white  >
   Which action do you consider next?
-</Box>
+</OldBox>
 
 ::background::
 
