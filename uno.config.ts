@@ -71,7 +71,9 @@ export default defineConfig({
       bias: "#E1C67C",
       sample: "#83D89E",
       received: "#4AB467",
-
+      
+      comp: "#E86623",
+      bespoke: "#07A9C0",
     }
   }
   // ...

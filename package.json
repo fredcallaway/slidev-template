@@ -7,7 +7,7 @@
     "index": "pnpm scripts/generate-index.ts",
     "deploy": "pnpm run index && firebase deploy",
     "copy-figs": "pnpm scripts/copy-figs.js",
-    "dev": "slidev",
+    "dev": "slidev --port 3066",
     "export": "slidev export"
   },
   "dependencies": {
