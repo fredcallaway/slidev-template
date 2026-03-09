@@ -9,6 +9,7 @@ function extractMetadataFromFile(filePath: string) {
   // Extract frontmatter
   const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
   let date: string | null = null;
+  let title: string | null = null;
 
   if (frontmatterMatch) {
     const frontmatter = frontmatterMatch[1];
@@ -16,14 +17,19 @@ function extractMetadataFromFile(filePath: string) {
     if (dateMatch) {
       date = dateMatch[1].trim();
     }
+    const titleMatch = frontmatter.match(/^title:\s*(.+)$/m);
+    if (titleMatch) {
+      title = titleMatch[1].trim();
+    }
   }
+  if (!title) {
+    // Extract title from first heading
+    const titleMatch = content.match(/^#\s+(.+)$/m);
+    let title: string | null = null;
 
-  // Extract title from first heading
-  const titleMatch = content.match(/^#\s+(.+)$/m);
-  let title: string | null = null;
-
-  if (titleMatch) {
-    title = titleMatch[1].trim();
+    if (titleMatch) {
+      title = titleMatch[1].trim();
+    }
   }
 
   return { date, title };
