@@ -14,7 +14,10 @@ const props = defineProps({
   },
   pad: {
     default: 5  // in spacing units (like p-5)
-  }
+  },
+  class: {
+    default: ''
+  },
 })
 
 const firstTag = computed(() => {
@@ -31,7 +34,7 @@ const slots = useSlots()
 </script>
 
 <template>
-<div :style="{ padding: `${props.pad * 0.25}rem` }">
+<div :style="{ padding: `${props.pad * 0.25}rem` }" >
 
   <div class="slidev-layout relative">
 
@@ -41,23 +44,12 @@ const slots = useSlots()
 
     <GridLines v-if="$slidev.configs.grid" />
 
-    <!-- left right layout -->
-    <div v-if="slots.right" class="h-full flex justify-between">
-      <div class="min-w-60">
-        <slot name="default" />
-      </div>
-
-      <div class="flex flex-col h-70 min-w-60">
-        <slot name="right" />
-      </div>
-    </div>
-
     <!-- section layout (if h2, h3 is first) -->
-    <div v-else-if="firstTag === 'h2'" class="section-divider">
+    <div v-else-if="firstTag === 'h2'" class="section-divider" :class="props.class">
       <slot name="default" />
     </div>    
     <!-- section layout (if h2, h3 is first) -->
-    <div v-else-if="firstTag === 'h3'" class="section-divider" bg-black text-white>
+    <div v-else-if="firstTag === 'h3'" class="section-divider" bg-black text-white :class="props.class">
       <slot name="default" />
     </div>    
 
@@ -68,7 +60,19 @@ const slots = useSlots()
 
       <!-- Main slot is a flex-wrap -->
       <div class="default-layout h-70">
-        <div class="w-full h-full flex flex-wrap gap-3 min-h-0 overflow-visible items-center justify-evenly">
+        <!-- left right layout -->
+        <div v-if="slots.right" class="h-70 flex justify-between" :class="props.class">
+          
+          <div class="min-w-60 flex flex-col">
+            <slot name="default" />
+          </div>
+
+          <div class="min-w-60 flex flex-col">
+            <slot name="right" />
+          </div>
+        </div>
+
+        <div v-else class="w-full h-full flex flex-wrap gap-3 min-h-0 overflow-visible items-center justify-evenly" :class="props.class">
           <slot name="default" />
         </div>
       </div>
