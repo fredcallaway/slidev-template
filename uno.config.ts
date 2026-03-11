@@ -26,6 +26,10 @@ export default defineConfig({
     [/^fill-(.+)$/, ([, c]) => `fixed inset-0 h-full w-full flex flex-col items-center justify-center bg-${c} text-white text-2xl`],
     [/^brd-(.+)$/, ([, c]) => `border-8 border-solid border-${c}`],
     [/^rot(\d+)$/, ([, d]) => `rotate-${d}`],
+    
+    [/^trx(-?\d+)$/, ([, d]) => `translate-x-${+d}`],
+    [/^try(-?\d+)$/, ([, d]) => `translate-y-${+d}`],
+
   ],
   presets: [
     presetWind3(),
@@ -36,11 +40,12 @@ export default defineConfig({
   //   extractorMdc()
   // ],
   rules: [
+    // Absolution positioning
     [/^t(-?\d+)$/, ([, d]) => ({ position: 'absolute', top: `${+d * 10}px` })],
     [/^b(-?\d+)$/, ([, d]) => ({ position: 'absolute', bottom: `${+d * 10}px` })],
     [/^r(-?\d+)$/, ([, d]) => ({ position: 'absolute', right: `${+d * 10}px` })],
     [/^l(-?\d+)$/, ([, d]) => ({ position: 'absolute', left: `${+d * 10}px` })],
-    
+
     // Clip-path rules
     // [/^clip-(\d+)$/, ([, p]) => ({ 'clip-path': `inset(${p}%)` })],
     // [/^clip-(\d+)-(\d+)$/, ([, v, h]) => ({ 'clip-path': `inset(${v}% ${h}%)` })],

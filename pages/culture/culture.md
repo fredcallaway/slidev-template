@@ -90,22 +90,25 @@ farrell2025large
     <v-clicks>
       <img t0 l0 src='./img/task-bespoke.png' />
       <img t0 l0 src='./img/task-compositional.png' />
-      <img t0 l0 src='./img/task-reuse.png' />
+      <!-- <img t0 l0 src='./img/task-reuse.png' /> -->
     </v-clicks>
   </div>
 </div>
 
-<div w-50 h-full v-click>
-  <h2 class="mb-2!">Parameters</h2>
-  <div class="grid grid-cols-[3rem_20rem] gap-2 items-center" >
-    <Tex tex="S^2" />
-    <div text-sm >number of possible tasks</div>
-    <Tex tex="K" />
-    <div text-sm >number of tasks to solve</div>
-    <Tex tex="\lambda_\text{exec}" />
-    <div text-sm >compositional execution cost</div>
-    <Tex tex="\lambda_\text{disc}" />
-    <div text-sm >compositional discovery cost</div>
+<div flex flex-col h-70>
+  <img h-50 mt--10 trx5 src='./img/model-reuse.png' v-click />
+  
+  <div w-50 h-full mt-5 text-sm v-click >
+    <div class="grid grid-cols-[3em_25em] gap-1 items-center" >
+      <Tex tex="S^2" />
+      <div text-sm >number of possible tasks</div>
+      <Tex tex="K" />
+      <div text-sm >number of tasks to solve</div>
+      <Tex tex="\lambda_\text{exec}" />
+      <div text-sm >compositional execution cost</div>
+      <Tex tex="\lambda_\text{disc}" />
+      <div text-sm >compositional discovery cost</div>
+    </div>
   </div>
 </div>
 
@@ -113,16 +116,8 @@ farrell2025large
 
 # When should an individual be compositional?
 
-<img w-50 src='./img/costs.png' />
-
-<div w-75>
-
-  **Compositional solutions have lower cost when the number of tasks to solve is *moderate***
-  <br><div h1 />
-     too few → upfront discovery cost
-  <br>
-     too many → repeated execution cost
-</div>
+<img w-50 src='./fig/individual-costs.png' />
+<img w-50 src='./fig/individual-policy.png' />
 
 
 ::cite::
@@ -130,6 +125,12 @@ farrell2025large
   
   $S = 10,\; λ_\text{exec}=0.2,\; λ_\text{disc}=0.2$
 </div>
+
+---
+
+# Individual policy
+
+<img src='./fig/individual-policy.png' />
 
 ---
 
