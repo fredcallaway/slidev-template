@@ -82,7 +82,7 @@ farrell2025large
 
 ---
 
-# Model
+# Compositional task space
 
 <div w-70 h-full>
   <div relative w-90 h-full>
@@ -100,8 +100,8 @@ farrell2025large
   
   <div w-50 h-full mt-5 text-sm v-click >
     <div class="grid grid-cols-[3em_25em] gap-1 items-center" >
-      <Tex tex="S^2" />
-      <div text-sm >number of possible tasks</div>
+      <Tex tex="S" />
+      <div text-sm >environment size</div>
       <Tex tex="K" />
       <div text-sm >number of tasks to solve</div>
       <Tex tex="\lambda_\text{exec}" />
@@ -114,23 +114,31 @@ farrell2025large
 
 ---
 
-# When should an individual be compositional?
+# The costs and benefits of compositionality
 
-<img w-50 src='./fig/individual-costs.png' />
-<img w-50 src='./fig/individual-policy.png' />
+<img try6 h55 src='./fig/individual-costs.png' />
 
+<Switch>
+  <img h55 trx-10 src='./img/model-reuse.png'  />
+  <div>
+    <img try6 h55 src='./fig/individual-costs-varied.png' />
+    <img h-23 t0 r0 src='./img/model-reuse.png'  />
+  </div>
+</Switch>
 
-::cite::
-<div text-16pt mb--1>
-  
-  $S = 10,\; λ_\text{exec}=0.2,\; λ_\text{disc}=0.2$
-</div>
+::rcite::
+
+<Tex text-xs tex="S = 10,\; λ_\text{exec}=0.2,\; λ_\text{disc}=0.5" />
 
 ---
 
-# Individual policy
+# When should an individual be compositional?
 
-<img src='./fig/individual-policy.png' />
+<img src='./fig/individual-costs-SK.png' />
+
+::rcite::
+
+<Tex text-xs tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.5" />
 
 ---
 

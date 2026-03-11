@@ -18,3 +18,20 @@
   
   $S = 10,\; λ_\text{exec}=0.2,\; λ_\text{disc}=0.2$
 </div>
+
+---
+
+
+# The costs and benefits of compositionality
+
+<img try6 h55 src='./fig/individual-costs.png' />
+
+<Switch>
+  <img h55 trx-10 src='./img/model-reuse.png'  />
+  <div>
+    <img try6 h55 src='./fig/individual-costs-varied.png' />
+    <img h-23 t0 r0 src='./img/model-reuse.png'  />
+  </div>
+</Switch>
+
+---
