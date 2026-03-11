@@ -82,7 +82,7 @@ farrell2025large
 
 ---
 
-# Compositional task space
+# Compositional problem solving
 
 <div w-70 h-full>
   <div relative w-90 h-full>
@@ -126,9 +126,9 @@ farrell2025large
   </div>
 </Switch>
 
-::rcite::
+::cite::
 
-<Tex text-xs tex="S = 10,\; λ_\text{exec}=0.2,\; λ_\text{disc}=0.5" />
+<Tex text-16pt tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.75,\; S = 10" />
 
 ---
 
@@ -136,24 +136,52 @@ farrell2025large
 
 <img src='./fig/individual-costs-SK.png' />
 
-::rcite::
+::cite::
 
-<Tex text-xs tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.5" />
+<Tex text-16pt tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.75" />
 
 ---
 
 # When should a *population* be compositional?
 
-
 <img w-50 src='./fig/social-costs.png' />
 
-<div w-75>
-  <br><div h1 />
-     too few → unlikely to observe anything relevant
-  <br>
-     too many → likely to observe bespoke
+::cite::
+
+<Tex text-16pt tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.75,\; D=30" />
+
+---
+
+# When should a *population* be compositional?
+
+<div w-70 relative>
+  <img h55 src='./img/model-reuse.png' />
+  <div text-xs l32 t55 font-bold text-purple>including other's!</div>
 </div>
 
+<img h-50 src='./fig/social-costs.png' />
+
+::cite::
+
+<Tex text-16pt tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.75,\; D=30" />
+
+---
+
+# A victory for compositional social learning
+
+<img h-45 src='./fig/individual-costs-SK.png' />
+<img h-45 src='./fig/social-costs.png' />
+
+---
+
+# A *problem* for compositional social learning
+
+<img h-45 src='./fig/individual-costs-SK.png' />
+<img h-45 src='./fig/social-costs.png' />
+
+::bottom::
+
+[how does it get started?]{v-click .font-italic}
 
 
 ---
@@ -161,16 +189,6 @@ farrell2025large
 # When *will* a population be compositional?
 
 <img src='./fig/asymptotic.png' />
-
----
-
-### so, good things evolve? fascinating stuff...
-
----
-
-# Good things do not always evolve
-
-<img src='./fig/mismatch.png' />
 
 ---
 
