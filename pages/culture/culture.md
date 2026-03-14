@@ -1,5 +1,3 @@
-
-
 # People are *wildly*{.text-comp} compositional
 
 <v-clicks flex flex-row justify-between w-full > 
@@ -74,15 +72,7 @@ farrell2025large
 
 ---
 
-<Outline click />
-
----
-
-<Outline at=1 />
-
----
-
-# Compositional problem solving
+# Model
 
 <div w-70 h-full>
   <div relative w-90 h-full>
@@ -174,25 +164,42 @@ farrell2025large
 
 ---
 
-# A *problem* for compositional social learning
+# A *problem* for compositional social learning?
 
 <img h-45 src='./fig/individual-costs-SK.png' />
 <img h-45 src='./fig/social-costs.png' />
 
-::bottom::
+---
 
-[how does it get started?]{v-click .font-italic}
+# A *problem* for compositional social learning?
 
+<img src='./fig/social-costs-SD.png' />
+
+::cite::
+<Tex tex="K=1" />
 
 ---
 
-# When *will* a population be compositional?
+# Not always!
 
-<img src='./fig/asymptotic.png' />
+<img src='./fig/evolution2.png' />
 
 ---
 
-<Outline at=2 />
+# Not always... but sometimes
+
+<img h50 src='./fig/evolution2.png' />
+<img h50 src='./fig/evolution3.png' />
+
+::cite::
+<Tex tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.75" />
+
+::rcite::
+<Tex tex="\lambda_\text{exec}=0.2,\; λ_\text{disc}=0.85" />
+
+---
+
+## I ran out of time, just throwing stuff in now
 
 ---
 
@@ -202,17 +209,28 @@ farrell2025large
 
 ---
 
-# Compositionality over time
+# Too much of a good thing
+
+<Switch>
+  <img h60 src='./fig/social-costs-SD.png' />
+  <img h60 src='./fig/social-costs-SD-big.png' />
+</Switch>
+
+
+---
+
+# Results
 
 <img src='./fig/exp1/compositionality-curve.png' />
 
 ---
 
-# Cost 
+# Evolvable ≠ good for the population
 
-<img src='./fig/exp2-comp-cost.png' />
+<img src='./img/2026-03-11-12-56-50.png' />
 
 ---
 
+# Results
 
-<img src='./img/exp2-scatter.png' />
+<img src='./fig/exp2-comp-cost.png' />
