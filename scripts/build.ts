@@ -3,36 +3,99 @@
 import { execSync } from "child_process"
 import { readFileSync, writeFileSync, existsSync } from "fs"
 
+const TITLE_STOP_WORDS = new Set([
+  "a",
+  "an",
+  "the",
+  "and",
+  "or",
+  "but",
+  "in",
+  "on",
+  "at",
+  "to",
+  "for",
+  "of",
+  "as",
+  "by",
+  "with",
+  "from",
+])
+
+function slugBuildSegment(s: string): string {
+  return s
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, "-")
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+}
+
+function firstSignificantTitleWord(title: string): string {
+  const words = title
+    .toLowerCase()
+    .split(/[\s–—]+/)
+    .map((w) => w.replace(/[^a-z0-9']/g, ""))
+    .filter(Boolean)
+  for (const w of words) {
+    const core = w.replace(/'/g, "")
+    if (!TITLE_STOP_WORDS.has(core)) return core
+  }
+  return words[0]?.replace(/'/g, "") || "update"
+}
+
+function getBuildName(
+  src: string,
+  meta: { buildName: string | null; title: string | null }
+): string {
+  if (meta.buildName) {
+    return slugBuildSegment(meta.buildName)
+  }
+  const base = src.split(/[/\\]/).pop() || ""
+  if (base !== "slides.md") {
+    const stem = base.replace(/\.md$/i, "")
+    return slugBuildSegment(stem)
+  }
+  if (meta.title) {
+    return slugBuildSegment(firstSignificantTitleWord(meta.title))
+  }
+  throw new Error(`No build name found for ${src}`)
+}
+
 function extractMetadataFromFile(filePath: string) {
-  const content = readFileSync(filePath, 'utf-8');
+  const content = readFileSync(filePath, "utf-8")
 
   // Extract frontmatter
-  const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
-  let date: string | null = null;
-  let title: string | null = null;
+  const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
+  let date: string | null = null
+  let title: string | null = null
+  let buildName: string | null = null
 
   if (frontmatterMatch) {
-    const frontmatter = frontmatterMatch[1];
-    const dateMatch = frontmatter.match(/^date:\s*(\d{4}-\d{2}-\d{2})$/m);
+    const frontmatter = frontmatterMatch[1]
+    const dateMatch = frontmatter.match(/^date:\s*(\d{4}-\d{2}-\d{2})$/m)
     if (dateMatch) {
-      date = dateMatch[1].trim();
+      date = dateMatch[1].trim()
     }
-    const titleMatch = frontmatter.match(/^title:\s*(.+)$/m);
+    const titleMatch = frontmatter.match(/^title:\s*(.+)$/m)
     if (titleMatch) {
-      title = titleMatch[1].trim();
+      title = titleMatch[1].trim().replace(/^["']|["']$/g, "")
+    }
+    const buildNameMatch = frontmatter.match(/^buildName:\s*(.+)$/m)
+    if (buildNameMatch) {
+      buildName = buildNameMatch[1].trim().replace(/^["']|["']$/g, "")
     }
   }
   if (!title) {
-    // Extract title from first heading
-    const titleMatch = content.match(/^#\s+(.+)$/m);
-    let title: string | null = null;
-
-    if (titleMatch) {
-      title = titleMatch[1].trim();
+    const headingMatch = content.match(/^#\s+(.+)$/m)
+    if (headingMatch) {
+      title = headingMatch[1].trim()
     }
   }
 
-  return { date, title };
+  return { date, title, buildName }
 }
 
 async function main() {
@@ -42,19 +105,13 @@ async function main() {
   const filteredArgs = args.filter(arg => arg !== "--force")
   
   const src = filteredArgs[0] || "slides.md"
-  let name = filteredArgs[1] || src.replace(/\.md$/, "")
-  if (name == "slides") {
-    name = "update"
-  }
-  name = name.replace(/_/g, "-")
-  
+
   const generationDateTime = new Date().toISOString()
 
-  // Extract metadata from source file
-  const { date: slidesDate, title } = extractMetadataFromFile(src)
-  
-  // Use provided date, extracted date, or current date
-  const dateString = filteredArgs[2] || slidesDate || new Date().toISOString().split("T")[0]
+  const { date: slidesDate, title, buildName } = extractMetadataFromFile(src)
+  const name = getBuildName(src, { buildName, title })
+
+  const dateString = slidesDate || new Date().toISOString().split("T")[0]
   
   const dest = `${dateString}-${name}`
   const infoPath = `site/${dest}/info.json`
