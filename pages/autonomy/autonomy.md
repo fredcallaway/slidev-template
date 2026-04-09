@@ -1,25 +1,4 @@
 
-# A rational model of perceived control, negative thinking, and avoidance {.text-4xl!.translate-y-3}
-
-<NonLocal r5 t5 text-sm text-right text-teal-500 force>
-
-  **scroll** or **←**/**→** to navigate
-  
-  **↑**/**↓** skips animations
-
-  **g** for search
-
-  **o** for overview
-</NonLocal>
-
-<div translate-y-10>
-
-Fred Callaway  
-NYU & Harvard{.text-base}
-</div>
-
----
-
 <!-- <img src='./img/2025-10-15-23-22-42.png' full/> -->
 
 <div v-click text-white italic l0 t8 text-base>make a new friend?</div>
@@ -51,7 +30,6 @@ NYU & Harvard{.text-base}
       <div font-bold text-gray-6 text-xl>Bandura (1997)</div>
       <div font-bold text-gray-6 text-xl>Moscarello & Hartley (2017)</div>
       <div font-bold text-gray-6 text-xl>Granwald et al. (2025)</div>
-      <div font-bold text-gray-6 text-xl>Hartstra et al. (yesterday)</div>
     </div>
     <img src='./omni/cycle-noarrow.svg' full p5/>
   </div>
