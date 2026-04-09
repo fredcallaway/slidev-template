@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="174 284 666 477" width="666" height="477">
+  <defs>
+    <clipPath id="inner_stroke_clip_path">
+      <path d="M 406.44 304.56 L 608.76 304.56 L 608.76 427.68 L 406.44 427.68 Z"/>
+    </clipPath>
+    <clipPath id="inner_stroke_clip_path_2">
+      <path d="M 617.4 617.04 L 819.72 617.04 L 819.72 740.16 L 617.4 740.16 Z"/>
+    </clipPath>
+    <clipPath id="inner_stroke_clip_path_3">
+      <path d="M 194.76 617.04 L 397.08 617.04 L 397.08 740.16 L 194.76 740.16 Z"/>
+    </clipPath>
+  </defs>
+  <g id="Cycle" stroke-opacity="1" fill-opacity="1" stroke-dasharray="none" stroke="none" fill="none">
+    <title>Cycle</title>
+    <g id="Cycle_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_12">
+        <rect x="406.44" y="304.56" width="202.32" height="123.12" fill="white"/>
+        <rect x="406.44" y="304.56" width="202.32" height="123.12" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" clip-path="url(#inner_stroke_clip_path)"/>
+        <text transform="translate(411.44 309.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="71.296" y="30" xml:space="preserve">low </tspan>
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="26.223996" y="67.896" xml:space="preserve">perceived </tspan>
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="46.671996" y="105.79199" xml:space="preserve">control</tspan>
+        </text>
+      </g>
+      <g id="Graphic_11">
+        <rect x="617.4" y="617.04" width="202.32" height="123.12" fill="white"/>
+        <rect x="617.4" y="617.04" width="202.32" height="123.12" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" clip-path="url(#inner_stroke_clip_path_2)"/>
+        <text transform="translate(622.4 640.704)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="34.815996" y="30" xml:space="preserve">avoidant </tspan>
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="34.527996" y="67.896" xml:space="preserve">behavior</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <rect x="194.76" y="617.04" width="202.32" height="123.12" fill="white"/>
+        <rect x="194.76" y="617.04" width="202.32" height="123.12" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" clip-path="url(#inner_stroke_clip_path_3)"/>
+        <text transform="translate(199.76 640.704)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="35.711996" y="30" xml:space="preserve">negative </tspan>
+          <tspan font-family="Helvetica Neue" font-size="32" fill="black" x="39.839996" y="67.896" xml:space="preserve">thinking</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

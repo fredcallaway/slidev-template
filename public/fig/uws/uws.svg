@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="150" viewBox="0 0 800 600">
+<defs>
+  <clipPath id="clip150">
+    <rect x="0" y="0" width="800" height="600"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip150)" d="M0 600 L800 600 L800 0 L0 0  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<defs>
+  <clipPath id="clip151">
+    <rect x="160" y="0" width="561" height="561"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip150)" d="M70.8661 529.134 L729.134 529.134 L729.134 70.8661 L70.8661 70.8661  Z" fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
+<defs>
+  <clipPath id="clip152">
+    <rect x="70" y="70" width="659" height="459"/>
+  </clipPath>
+</defs>
+<polyline clip-path="url(#clip150)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:6; stroke-opacity:1; fill:none" points="70.8661,529.134 729.134,529.134 "/>
+<polyline clip-path="url(#clip150)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:6; stroke-opacity:1; fill:none" points="400,529.134 400,70.8661 "/>
+<polyline clip-path="url(#clip152)" style="stroke:#e1c67c; stroke-linecap:round; stroke-linejoin:round; stroke-width:12; stroke-opacity:1; fill:none" points="89.4964,92.6884 133.854,155.038 178.212,217.387 222.569,279.736 266.927,342.086 311.285,404.435 355.642,466.785 400,529.134 444.358,466.785 488.715,404.435 533.073,342.086 577.431,279.736 621.788,217.387 666.146,155.038 710.504,92.6884 "/>
+</svg>
